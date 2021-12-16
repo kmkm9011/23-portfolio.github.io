@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MK's Portfolio</title>
+    <meta name="author" content="Mi-kyung Kim">
+    <meta name="Description" contents="Mi-kyung's 2022 Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/project.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="js/project.js"></script>
+    <script>
+        $(document).ready(function(){
+            // import html
+            $("#menu").load("./html/menu.html"); 
+            $("#header").load("./html/header.html", function(){
+                $("#header__title").text("PROJECT").animate({ opacity : "1"}, 1000);
+            });    
+            $("#footer").load("./html/footer.html");
+            // animation
+            $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <header id="header"></header>
+    
+    <div class="project contents">
+        <ul>
+            <li class="project1">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="project2">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class="project3">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="project4">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="project5">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="project6">
+                <div class="project__info">
+                    <div class="project__info-wrap">
+                        <p class="project__title font-title-w">Comming Soon</p>
+                        <p class="project__description font-description-w">준비 중입니다.</p>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </div>
+    
+    <footer id="footer"></footer>
+</body>
+</html>

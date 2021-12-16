@@ -1,0 +1,104 @@
+/* Preser */
+header{
+    position: sticky;
+}
+.contents{opacity: 0; top:50px;}
+#header__title{opacity: 0;}
+
+/* contents */
+.blog{
+    width: 100%;
+}
+.blog-wrap{
+    width: 1400px;
+    margin: auto;
+}
+.blog__banner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+}
+.blog__intro-wrap{
+    width: 100%;
+    height: auto;
+}
+.blog__banner .blog__title, .blog__banner .blog__description{
+    text-align: center;
+}
+.blog__title{
+    width: 100%;
+    padding: 20px 0 10px;
+}
+.blog__description{
+    width: 100%;
+}
+.blog-wrap ul li{
+    float: left;
+    width: calc(50% - 30px);
+    height: auto;
+    margin-top: 120px;
+    margin-right: 60px;
+    cursor: pointer;
+} 
+.blog-wrap ul li:nth-child(2n){
+    margin-right: 0px;
+}
+.blog__img{
+    width: 100%;
+    padding-bottom: 100%;
+} 
+/* 리스트 이미지 적용 */
+.blog__banner{
+    background: center / cover no-repeat url(../img/blog-1.png);
+}
+.blog1{
+    background: center / cover no-repeat url(../img/pj-list2.png);
+}
+.blog2{
+    background: center / cover no-repeat url(../img/pj-list3.png);
+}
+/* .blog3{
+    background: center / cover no-repeat url(../img/pj-list3.png);
+}
+.blog4{
+    background: center / cover no-repeat url(../img/pj-list4.png);
+}
+.blog5{
+    background: center / cover no-repeat url(../img/pj-list5.png);
+}
+.blog6{
+    background: center / cover no-repeat url(../img/pj-list6.png); 
+}*/
+@media screen and (max-width: 1920px) { 
+    .blog-wrap{
+        width: calc(100% - 480px);
+        padding: 0 240px;
+    }
+}
+@media screen and (max-width: 1400px) { 
+    .blog-wrap{
+        width: calc(100% - 320px);
+        padding: 0 160px;
+    }
+}
+@media screen and (max-width: 960px) { 
+    .blog-wrap{
+        width: calc(100% - 120px);
+        padding: 0 60px;
+    }
+}
+@media screen and (max-width: 768px) { 
+    .blog-wrap ul li{
+        width: 100%;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 480px) { 
+    .blog-wrap{
+        width: calc(100% - 64px);
+        padding: 0 32px; 
+    } 
+} 

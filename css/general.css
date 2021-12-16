@@ -1,0 +1,205 @@
+/* -----------------폰트----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
+
+.h1{font: 96px / 112px 'Noto Sans KR', sans-serif;}
+.h2{font: 56px / 72px 'Noto Sans KR', sans-serif;}
+.h3{font: 48px / 56px 'Noto Sans KR', sans-serif;}
+.h4{font: 32px / 46px 'Noto Sans KR', sans-serif;}
+.h5{font: 500 24px / 36px 'Noto Sans KR', sans-serif;}
+.h6{font: 500 20px / 32px 'Noto Sans KR', sans-serif;}
+.t-body1{font: 14px / 20px 'Noto Sans KR', sans-serif;}
+.t-body2{font: 16px / 24px 'Noto Sans KR', sans-serif;}
+.t-caption{font: 12px / 18px 'Noto Sans KR', sans-serif;}
+
+
+.font-title{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#000000B3;}
+.font-subtitle{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#000000B3;}
+.font-body{font: 14px / 20px 'Noto Sans KR', sans-serif;color:#0000008c;}
+.font-description{font: 12px / 18px 'Noto Sans KR', sans-serif;color:#00000066;}
+
+.font-title-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#ffffff;}
+.font-description-w{font: 12px / 18px 'Noto Sans KR', sans-serif;color:#ffffffcc;}
+/* ---------------폰트 컬러--------------- */
+.b70{color:#000000B3;}
+.b40{color:#00000066;}
+.w100{color:#ffffff;}
+.w80{color:#ffffcc;}
+/* ---------------프리셋--------------- */
+body{position:relative;}
+.contents{
+    position: relative; 
+    top:0;}
+/* ---------------메인 메뉴--------------- */
+#menu{
+    display: none;
+    opacity: 0;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 99;
+}
+.menu__bg{
+    position: fixed;
+    right: 0;
+    width: 480px;
+    height: 100vh;
+    background-color: #ffffff;
+}
+.menu__list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.menu__list ul{
+    width: 100%;
+}
+.menu__list ul li{
+    text-align: center;
+    margin-bottom: 16px;
+}
+.menu__list ul li a{
+    position:relative;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 8px 0px;
+    text-decoration: none;
+    text-align: center;
+} 
+.menu__list ul li a .menu__bar{
+    position:absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00000066;
+    transition : width .2s ease-in;
+} 
+.menu__list ul li:hover a .menu__bar{
+    width: 100%;
+    transition : width .2s ease-in;
+} 
+/* ---------------헤더 푸터--------------- */
+header{
+    position: relative;
+    top:0px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    z-index: 9;
+    background-color: #ffffff;
+}
+/* 헤더 양끝 */
+header .header__side{
+    width: calc(50% - 700px);
+    height: 100%;
+}
+#logo, #menu__open, #menu__close{
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 60px 100px;
+    opacity: 0.7;
+}
+#menu__open, #menu__close{
+    position: absolute;
+    right: 0;
+}
+#logo img, #menu__open img, #menu__close img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition : background-color .1s ease-in;
+}
+#logo img{border-radius: 50%;}
+#logo img:hover, #menu__open img:hover, #menu__close img:hover{
+    background-color: #0000001a;
+    transition : background-color .2s ease-in;
+}
+
+/* 헤더 중앙 */
+header .header__center{
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#header__title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+/* 푸터 */
+footer{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+}
+footer p{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+/* 헤더 푸터 반응형 */
+@media screen and (max-width: 1920px) {  
+    header .header__side{
+        width: 240px;
+    }
+    header .header__center{
+        width: calc(100% - 480px);
+    }
+}
+@media screen and (max-width: 1400px) { 
+    header .header__side{
+        width: 160px;
+    }
+    #logo, #menu__open, #menu__close{
+        padding: 60px;
+    }
+    header .header__center{
+        width: calc(100% - 320px);
+    }
+}
+@media screen and (max-width: 960px) { 
+    header{
+        height: 100px;
+        background-color: #ffffff;
+        z-index: 9;
+    }
+    header .header__side{
+        width: 150px;
+    }
+    #logo, #menu__open, #menu__close{
+        width: 30px;
+        height: 30px;
+        padding: 35px 60px;
+    }
+    header .header__center{
+        width: calc(100% - 300px);
+    }
+    footer{
+        height: 100px;
+    }
+}
+@media screen and (max-width: 480px) { 
+    #menu{
+        background-color: #00000000;
+    }
+    .menu__bg{
+        width: 100%;
+    }
+    header .header__side{
+        width: 94px;
+    }
+    #logo, #menu__open, #menu__close{
+        padding: 35px 32px;
+    }
+    header .header__center{
+        width: calc(100% - 188px);
+    }
+}

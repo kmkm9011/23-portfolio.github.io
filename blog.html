@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MK's Portfolio</title>
+    <meta name="author" content="Mi-kyung Kim">
+    <meta name="Description" contents="Mi-kyung's 2022 Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/blog.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="js/blog.js"></script>
+    <script>
+        $(document).ready(function(){
+            // import html
+            $("#menu").load("./html/menu.html"); 
+            $("#header").load("./html/header.html", function(){
+                $("#header__title").text("BLOG").animate({ opacity : "1"}, 1000);
+            });    
+            $("#footer").load("./html/footer.html"); 
+            // animation
+            $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <header id="header"></header>
+    <div class="blog contents">
+        <div class="blog-wrap">
+            <div class="blog__banner">
+                <div class="blog__intro-wrap">
+                    <p class="blog__title font-title-w">달밤 프로젝트</p>
+                    <p class="blog__description font-description-w">달밤 프로젝트는 주경야독</br>컨셉의 자기개발 프로젝트입니다.</p>
+                </div>    
+            </div>
+            <ul>
+                <li>
+                    <div class="blog__img blog1"></div>
+                    <p class="blog__title font-title">Comming Soon</p> 
+                    <p class="blog__description font-description">Comming Soon</p>             
+                </li>
+                <li>
+                    <div class="blog__img blog2"></div>
+                    <p class="blog__title font-title">Comming Soon</p>
+                    <p class="blog__description font-description">Comming Soon</p>
+                </li>
+                <!-- <li>
+                    <div class="blog__img blog3"></div>
+                    <p class="blog__title font-title">Comming Soon</p>
+                    <p class="blog__description font-description">Comming Soon</p>
+                </li><li>
+                    <div class="blog__img blog4"></div>
+                    <p class="blog__title font-title">Comming Soon</p>
+                    <p class="blog__description font-description">Comming Soon</p>
+                </li>
+                <li>
+                    <div class="blog__img blog5"></div>
+                    <p class="blog__title font-title">Comming Soon</p>
+                    <p class="blog__description font-description">Comming Soon</p>
+                </li>
+                <li>
+                    <div class="blog__img blog6"></div>
+                    <p class="blog__title font-title">Comming Soon</p>
+                    <p class="blog__description font-description">Comming Soon</p>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+</html>

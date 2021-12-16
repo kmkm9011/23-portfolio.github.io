@@ -1,0 +1,117 @@
+/* Preser */
+header{
+    position: sticky;
+}
+.contents{opacity: 0; top:50px;}
+#header__title{opacity: 0;}
+/* contents */
+.project{
+    width: 100%;
+}
+.project ul{
+    width: 1400px;
+    margin: auto;
+}
+.project ul li{
+    width: 50%;
+    padding-bottom: 50%;
+    position: relative;
+    top: 0;
+    float: left;
+    cursor: pointer;
+} 
+.project__info{
+    opacity: 0;
+    transition : opacity .2s ease-in;
+    
+    position:absolute;
+    width: calc(100% - 64px);
+    padding: 0 32px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    background-color: #00000080;
+} 
+.project__info-wrap{
+    width: 100%;
+    height: auto;
+}
+.project__title{
+    width: 100%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.project__description{
+    width: 100%;
+    height: auto;
+    padding-top: 6px;
+    text-align: center;
+}
+.project__info:hover{
+    opacity: 1;
+    transition : opacity .3s ease-in
+}
+/* 리스트 이미지 적용 */
+.project1{
+    background: center / cover no-repeat url(../img/pj-list1.png);
+}
+.project2{
+    background: center / cover no-repeat url(../img/pj-list1.png);
+}
+/* .project3{
+    background: center / cover no-repeat url(../img/pj-list3.png);
+}
+.project4{
+    background: center / cover no-repeat url(../img/pj-list4.png);
+}
+.project5{
+    background: center / cover no-repeat url(../img/pj-list5.png);
+}
+.project6{
+    background: center / cover no-repeat url(../img/pj-list6.png);
+} */
+
+
+
+@media screen and (max-width: 1920px) { 
+    .project ul{
+        width: calc(100% - 480px);
+        padding: 0 240px;
+    }
+}
+@media screen and (max-width: 1400px) { 
+    .project ul{
+        width: calc(100% - 320px);
+        padding: 0 160px;
+    }
+}
+@media screen and (max-width: 960px) { 
+    .project ul{
+        width: calc(100% - 120px);
+        padding: 0 60px;
+    }
+}
+@media screen and (max-width: 768px) { 
+    .project ul li{
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+@media screen and (max-width: 480px) { 
+    .project ul{
+        width: calc(100% - 64px);
+        padding: 0 32px; 
+    }
+    .project ul li{
+        opacity: 1;    
+        background-color: #0000001a;
+        
+    }  
+    .project__info{
+        opacity: 1;
+        transition : opacity .2s ease-in;
+        background-color: #00000033;
+    } 
+} 

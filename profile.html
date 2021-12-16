@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MK's Portfolio</title>
+    <meta name="author" content="Mi-kyung Kim">
+    <meta name="Description" contents="Mi-kyung's 2022 Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./js/profile.js"></script>
+    <script>
+        $(document).ready(function(){
+            // import html
+            $("#menu").load("./html/menu.html"); 
+            $("#header").load("./html/header.html", function(){
+                $("#header__title").text("PROFILE").animate({ opacity : "1"}, 1000);
+            });    
+            $("#footer").load("./html/footer.html"); 
+            // animation
+            $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <header id="header"></header>
+    <div class="profile contents">
+        <div class="profile-wrap">
+
+
+            <div class="profile__top">
+                <div class="action">
+                    <video muted autoplay loop>
+                        <source src="./img/profile.mp4" type="video/mp4">
+                        <strong>Your browser does not support the video tag.</strong>
+                    </video>
+                </div>
+
+                <div class="skill">
+                    <ul class="skill__name">
+                        <li class="font-description">Product / UI Designer</li>
+                        <li class="font-title">김미경</li>
+                    </ul>
+                    <ul class="skill__skill">
+                        <li class="profile__title font-subtitle">Skill Level</li>
+                        <li>
+                            <div class="skill__info">
+                                <span class="skill__title font-body">Graphic</span>
+                                <span class="skill__detail font-description">Photoshop Illustrator</span>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__level font-description">하</span>
+                                <div class="skill-bg">
+                                    <div class="skill-bar skill__graphic"></div>
+                                </div>
+                                <span class="skill__level font-description">상</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__info">
+                                <span class="skill__title font-body">UI</span>
+                                <span class="skill__detail font-description">Sketch Figma Zepplinr</span>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__level font-description">하</span>
+                                <div class="skill-bg">
+                                    <div class="skill-bar skill__ui"></div>
+                                </div>
+                                <span class="skill__level font-description">상</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__info">
+                                <span class="skill__title font-body">Video</span>
+                                <span class="skill__detail font-description">After Effect</span>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__level font-description">하</span>
+                                <div class="skill-bg">
+                                    <div class="skill-bar skill__video"></div>
+                                </div>
+                                <span class="skill__level font-description">상</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__info">
+                                <span class="skill__title font-body">Publishing Basics</span>
+                                <span class="skill__detail font-description">html css</span>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__level font-description">하</span>
+                                <div class="skill-bg">
+                                    <div class="skill-bar skill__basic"></div>
+                                </div>
+                                <span class="skill__level font-description">상</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill__info">
+                                <span class="skill__title font-body">Publishing</span>
+                                <span class="skill__detail font-description">sass Javascript jquery</span>
+                            </div>
+                            <div class="skill__info">
+                                <span class="skill__level font-description">하</span>
+                                <div class="skill-bg">
+                                    <div class="skill-bar skill__publishing"></div>
+                                </div>
+                                <span class="skill__level font-description">상</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile__bottom">
+
+                <ul class="career">
+                    <li class="font-subtitle">Career</li>
+                    <li>
+                        <span class="font-body">중앙대학교</span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2010.02 - 2015.02</span>
+                    </li>
+                    <li>
+                        <span class="font-body">Ameba Design</span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2015.03 - 2016.07</span>
+                    </li>
+                    <li>
+                        <span class="font-body">ITX M2M</span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2016.08 - 2019.03</span>
+                    </li>
+                    <li>
+                        <span class="font-body">kt NexR</span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2019.04 - Now</span>
+                    </li>
+                </ul>
+                <ul class="project">
+                    <li class="font-subtitle">Main Project</li>
+                    <li>
+                        <span class="font-body">IoT@home
+                            <span class="font-description">LG U+</span>
+                        </span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2015.05 - 2016.07</span>
+                        
+                    </li>
+                    <li>
+                        <span class="font-body">Cake
+                            <span class="font-description">SKT</span>
+                        </span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2016.06 - 2016.07</span>
+                    </li>
+                    <li>
+                        <span class="font-body">Muin shop
+                            <span class="font-description">China</span>
+                        </span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2017.08 - 2019.03</span>
+                        
+                    </li>
+                    <li>
+                        <span class="font-body">NexR Enterprise</span>
+                        <span class="profile__empty"></span>
+                        <span class="font-description">2019.04 - Now</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+    <footer id="footer"></footer>
+</body>
+</html>

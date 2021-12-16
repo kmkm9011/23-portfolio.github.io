@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MK's Portfolio</title>
+    <meta name="author" content="Mi-kyung Kim">
+    <meta name="Description" contents="Mi-kyung's 2022 Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="apple-touch-icon" href="./img/favicon.ico/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // import html
+            $("#menu").load("./html/menu.html"); 
+            $("#header").load("./html/header.html", function(){
+                $("#header__title").text("MK's PORTFOLIO");
+            });    
+            $("#footer").load("./html/footer.html"); 
+            // animation
+            $("body").stop().animate({ opacity : "1", top : "0"}, 1000);
+        });
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <header id="header"></header>
+    <div class="main contents">
+        <video muted autoplay loop>
+            <source src="./img/main.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+    </div>
+    <footer id="footer"></footer>
+</body>
+</html>
