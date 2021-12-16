@@ -31,14 +31,14 @@ function menuLink(){
         menuClose();
         menuIndexConnect();
         setTimeout(function() { 
-            location.href = "../index.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/";
         },600);
     });
     $(".menu__list ul li").eq(0).on("click" , function(){
         menuClose();
         menuIndexConnect();
         setTimeout(function() { 
-            location.href = "../index.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/";
         },600);
     });
     // 그 외로 이동
@@ -46,21 +46,21 @@ function menuLink(){
         menuClose();
         menuConnect();
         setTimeout(function() { 
-            location.href = "../project.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/project.html";
         },600);
     });
     $(".menu__list ul li").eq(2).on("click" , function(){
         menuClose();
         menuConnect();
         setTimeout(function() { 
-            location.href = "../blog.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/blog.html";
         },600);
     });
     $(".menu__list ul li").eq(3).on("click" , function(){
         menuClose();
         menuConnect();
         setTimeout(function() { 
-            location.href = "../profile.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/profile.html";
         },600);
     });
 }
