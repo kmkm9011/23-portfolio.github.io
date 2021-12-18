@@ -29,6 +29,7 @@ body{position:relative;}
 .contents{
     position: relative; 
     top:0;}
+a{text-decoration: none;}
 /* ---------------메인 메뉴--------------- */
 #menu{
     display: none;

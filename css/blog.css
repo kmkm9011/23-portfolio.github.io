@@ -4,7 +4,6 @@ header{
 }
 .contents{opacity: 0; top:50px;}
 #header__title{opacity: 0;}
-
 /* contents */
 .blog{
     width: 100%;
@@ -52,26 +51,20 @@ header{
 } 
 /* 리스트 이미지 적용 */
 .blog__banner{
-    background: center / cover no-repeat url(../img/blog-1.png);
+    background: center / cover no-repeat url(../img/blog/blog-1.png);
 }
 .blog1{
-    background: center / cover no-repeat url(../img/pj-list2.png);
+    background: center / cover no-repeat url(../img/blog/blog-2.png);
 }
 .blog2{
-    background: center / cover no-repeat url(../img/pj-list3.png);
+    background: center / cover no-repeat url(../img/blog/blog-3.png);
 }
-/* .blog3{
-    background: center / cover no-repeat url(../img/pj-list3.png);
+.blog3{
+    background: center / cover no-repeat url(../img/blog/blog-4.png);
 }
 .blog4{
-    background: center / cover no-repeat url(../img/pj-list4.png);
+    background: center / cover no-repeat url(../img/blog/blog-5.png);
 }
-.blog5{
-    background: center / cover no-repeat url(../img/pj-list5.png);
-}
-.blog6{
-    background: center / cover no-repeat url(../img/pj-list6.png); 
-}*/
 @media screen and (max-width: 1920px) { 
     .blog-wrap{
         width: calc(100% - 480px);
