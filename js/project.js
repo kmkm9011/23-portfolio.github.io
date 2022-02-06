@@ -1,6 +1,15 @@
 $(document).ready(function(){
     projectOpen();
     projectLink();
+    $(window).bind("pageshow", function (event) {
+        if (event.originalEvent.persisted) {
+            projectOpen();
+        }
+        else {
+            // 새로운 페이지 로드 시
+        }
+    });
+    
 });
 
 function projectOpen(){
