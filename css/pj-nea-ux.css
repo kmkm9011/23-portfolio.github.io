@@ -1,0 +1,111 @@
+.banner-main{
+    background: center / cover no-repeat url(../img/nea-ux/banner-1.png);
+}
+.info__bar{
+    width: 100%;
+}
+
+/* ------ 오버뷰 ------ */
+.overview-wrap{
+    background: center / cover no-repeat url(../img/nea/overview.png);
+}
+
+/* ------ 리서치 ------ */
+.research__competitors{
+    margin-bottom: 80px;
+}
+.research__competitors .pj__description,
+.research__doc .pj__description{
+    padding: 10px 0 40px;
+}
+.research__competitors .image-wrap{
+    width: 100%;
+    height: auto;
+}
+.research__btn-wrap{
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+}
+.research__doc .image-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.image-wrap img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow : 0 4px 10px #0000001a, 0 0 5px #0000000d;
+}
+.research__doc .image-wrap div{
+    width: calc(33.33% - 40px);
+}
+.research__arrow{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.research__arrow div{
+    width: 40px;
+    margin: auto;
+}
+.research__arrow div img{
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+}
+/* ------ 브랜드 ------ */
+.brand-wrap{
+    background: #f5f5f5;
+}
+.brand__add{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 40px;
+    background-color: red;
+}
+.brand__full{
+    width: 100%;
+    height: 400px;
+    background-color: blue;
+}
+.brand .btn-wrap{
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+.brand .btn-wrap .btn{
+    width: 260px;
+    margin: auto;
+}
+.brand .btn-wrap .btn button{
+    width: 100%;
+}
+
+
+.ui-wrap{
+    background-color: #f5f5f5;
+}
+@media screen and (max-width: 1400px) { 
+    .research__doc .image-wrap div{
+        width: calc(50% - 30px);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow : 0 4px 10px #0000001a, 0 0 5px #0000000d;
+    }
+    .research__doc .image-wrap div:last-child{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) { 
+    .research__doc .image-wrap div{
+        width: 100%;
+    }
+    .research__doc .image-wrap div:nth-child(2){
+        display: none;
+    }
+}

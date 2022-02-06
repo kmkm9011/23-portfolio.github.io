@@ -11,6 +11,8 @@ header{
 .project ul{
     width: 1400px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .project ul li{
     width: 50%;
@@ -37,41 +39,51 @@ header{
     width: 100%;
     height: auto;
 }
-.project__title{
+.project__info-wrap .project__title{
     width: 100%;
     height: auto;
     width: 100%;
     text-align: center;
 }
-.project__description{
+.project__info-wrap .project__description{
     width: 100%;
     height: auto;
     padding-top: 6px;
     text-align: center;
+    color:#ffffffcc;
+}
+.project__arrow{
+    width: 40px;
+    height: auto;
+    margin: auto;
+    padding-right: 50px;
+    transition : padding-right .2s ease-in;
 }
 .project__info:hover{
     opacity: 1;
-    transition : opacity .3s ease-in
+    transition : opacity .3s ease-in;
+}
+.project__info:hover .project__arrow{
+    opacity: 1;
+    padding-right: 0px;
+    transition : padding-right .3s ease-in;
 }
 /* 리스트 이미지 적용 */
-.project1{
-    background: center / cover no-repeat url(../img/pj-list1.png);
+.nea{
+    background: center / cover no-repeat url(../img/pj-nea.png);
 }
-.project2{
-    background: center / cover no-repeat url(../img/pj-list1.png);
+.nea-ux{
+    background: center / cover no-repeat url(../img/pj-nea-ux.png);
 }
-/* .project3{
-    background: center / cover no-repeat url(../img/pj-list3.png);
+.neb{
+    background: center / cover no-repeat url(../img/pj-neb.png);
 }
-.project4{
-    background: center / cover no-repeat url(../img/pj-list4.png);
+.ndc{
+    background: center / cover no-repeat url(../img/pj-ndc.png);
 }
-.project5{
-    background: center / cover no-repeat url(../img/pj-list5.png);
+.ne-branding{
+    background: center / cover no-repeat url(../img/pj-ne-branding.png);
 }
-.project6{
-    background: center / cover no-repeat url(../img/pj-list6.png);
-} */
 
 
 

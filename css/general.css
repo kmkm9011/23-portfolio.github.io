@@ -1,35 +1,103 @@
 /* -----------------폰트----------------- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 
 .h1{font: 96px / 112px 'Noto Sans KR', sans-serif;}
 .h2{font: 56px / 72px 'Noto Sans KR', sans-serif;}
 .h3{font: 48px / 56px 'Noto Sans KR', sans-serif;}
-.h4{font: 32px / 46px 'Noto Sans KR', sans-serif;}
-.h5{font: 500 24px / 36px 'Noto Sans KR', sans-serif;}
-.h6{font: 500 20px / 32px 'Noto Sans KR', sans-serif;}
-.t-body1{font: 14px / 20px 'Noto Sans KR', sans-serif;}
-.t-body2{font: 16px / 24px 'Noto Sans KR', sans-serif;}
-.t-caption{font: 12px / 18px 'Noto Sans KR', sans-serif;}
+.h4{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #000000;}
+.h4-w{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #ffffff;}
+.h5{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #000000;}
+.h5-w{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #ffffff;}
+.h6{font: 500 20px / 32px 'Noto Sans KR', sans-serif; color: #000000;}
+.h6-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color: #ffffff;}
 
 
 .font-title{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#000000B3;}
 .font-subtitle{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#000000B3;}
-.font-body{font: 14px / 20px 'Noto Sans KR', sans-serif;color:#0000008c;}
-.font-description{font: 12px / 18px 'Noto Sans KR', sans-serif;color:#00000066;}
+.font-body{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#0000008c;}
+.font-description{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#00000066;}
 
 .font-title-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#ffffff;}
-.font-description-w{font: 12px / 18px 'Noto Sans KR', sans-serif;color:#ffffffcc;}
+.font-subtitle-w{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#ffffff;}
+.font-body-w{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#ffffffB3;}
+.font-description-w{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#ffffff80;} 
 /* ---------------폰트 컬러--------------- */
 .b70{color:#000000B3;}
 .b40{color:#00000066;}
 .w100{color:#ffffff;}
-.w80{color:#ffffcc;}
+.w80{color:#ffffffcc;}
+.w60{color:#ffffffb3;}
 /* ---------------프리셋--------------- */
 body{position:relative;}
 .contents{
     position: relative; 
     top:0;}
 a{text-decoration: none;}
+.small--outlined{
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #000000B3;
+    line-height: 12px;
+    padding: 6px 12px;
+    border-radius: 13px;
+    border: 1px solid #0000008c;
+    background-color: #00000000;
+    transition : background-color .2s ease-in;
+    cursor: pointer;
+}
+.small--outlined:hover{
+    background-color : #0000000d;
+    transition : background-color .2s ease-in;
+}
+.default--solid{
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 16px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 18px;
+    background-color: #000000cc;
+    transition : background-color .2s ease-in;
+    cursor: pointer;
+}
+.default--solid:hover{
+    background-color: #000000;
+    transition : background-color .2s ease-in;
+}
+.large--solid{
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 14px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 24px;
+    background-color: #000000cc;
+    transition : background-color .2s ease-in;
+    cursor: pointer;
+}
+.large--solid:hover{
+    background-color: #000000;
+    transition : background-color .2s ease-in;
+}
+/* ---------------레이아웃--------------- */
+.con-inner{
+    width: 1400px;
+    margin: auto;
+}
+@media screen and (max-width: 1920px) { 
+    .con-inner{width: calc(100% - 480px);}
+}
+@media screen and (max-width: 1400px) { 
+    .con-inner{width: calc(100% - 320px);}
+}
+@media screen and (max-width: 960px) { 
+    .con-inner{width: calc(100% - 120px);}
+}
+@media screen and (max-width: 480px) { 
+    .con-inner{width: calc(100% - 64px);}
+} 
 /* ---------------메인 메뉴--------------- */
 #menu{
     display: none;
@@ -90,7 +158,6 @@ header{
     height: 160px;
     display: flex;
     z-index: 9;
-    background-color: #ffffff;
 }
 /* 헤더 양끝 */
 header .header__side{
@@ -169,7 +236,6 @@ footer p{
 @media screen and (max-width: 960px) { 
     header{
         height: 100px;
-        background-color: #ffffff;
         z-index: 9;
     }
     header .header__side{

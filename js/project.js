@@ -6,40 +6,28 @@ $(document).ready(function(){
 
 
 function projectLink(){
-    $(".project ul li").eq(0).on("click" , function(){
+    $(".nea").on("click" , function(){
         projectAction();
         setTimeout(function() { 
-            location.href = "../html/project1.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/pj-nea.html";
         },500);
     });
-    $(".project ul li").eq(1).on("click" , function(){
+    $(".nea-ux").on("click" , function(){
         projectAction();
         setTimeout(function() { 
-            location.href = "../html/project2.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/pj-nea-ux.html";
         },500);
     });
-    $(".project ul li").eq(2).on("click" , function(){
+    $(".ndc").on("click" , function(){
         projectAction();
         setTimeout(function() { 
-            location.href = "../html/project3.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io/pj-ndc.html";
         },500);
     });
-    $(".project ul li").eq(3).on("click" , function(){
+    $(".ne-branding").on("click" , function(){
         projectAction();
         setTimeout(function() { 
-            location.href = "../html/project4.html";
-        },500);
-    });
-    $(".project ul li").eq(4).on("click" , function(){
-        projectAction();
-        setTimeout(function() { 
-            location.href = "../html/project5.html";
-        },500);
-    });
-    $(".project ul li").eq(5).on("click" , function(){
-        projectAction();
-        setTimeout(function() { 
-            location.href = "../html/project6.html";
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html";
         },500);
     });
 }

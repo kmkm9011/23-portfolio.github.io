@@ -1,0 +1,429 @@
+
+/* ------ 공통 영역 ------ */
+
+#header{ opacity: 0;}
+.contents{ opacity: 0; top: 100px;}
+#banner-main{
+    background: center / cover no-repeat url(../img/nea/banner-main.png);
+    background-attachment: fixed;
+}
+.info__bar{width: 100%;}
+/* ------ 오버뷰 ------ */
+.overview-wrap{
+    background: center / cover no-repeat url(../img/nea/bg-overview.png);
+}
+/* ------ 리서치 ------ */
+.research button{margin-top: 24px;margin-right: 8px;}
+.research-bottom{
+    width: 100%;
+    height: auto;
+}
+.research-bottom img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+/*------------------------ 이슈 / 골 ------------------------*/
+.concept-title-wrap{
+    background:
+    linear-gradient(#ffffff 30%, #ffffff00 30.1%),
+    url(../img/nea/texure-noise.png),
+    linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+}
+.concept__video{
+    width: 80%;
+    margin: auto;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.concept__video video{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 10px solid #000000;
+}
+
+.concept-title-wrap .name-wrap{
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+.concept-title .pj__description span{
+    color : #ffffff;
+    font-weight : 500;
+}
+.concept__concept{
+    width: 100%;
+    margin: auto;
+    margin-top: 80px;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.concept__concept ul{
+    width: 100%; 
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.concept__circle{
+    box-sizing: border-box;
+    position: relative;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+
+    -webkit-transition:height 1s, padding-bottom 1s, border-radius 1s;
+    -moz-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    -ms-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    -o-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    transition: height 1s, padding-bottom 1s, border-radius 1s;
+}
+.concept__plus{
+    position: relative;
+    width: 12.5%;
+    padding-bottom: 12.5%;
+
+    -webkit-transition: height 1s, padding-bottom 1s;
+    -moz-transition: height 1s, padding-bottom 1s;
+    -ms-transition: height 1s, padding-bottom 1s;
+    -o-transition: height 1s, padding-bottom 1s;
+    transition: height 1s, padding-bottom 1s;
+}
+.concept__concept ul li div{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+.concept__concept ul li div p{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/*------------------------ 폰트 / 컬러 ------------------------*/
+
+.font__image img{
+    width: 100%;
+    height: auto;
+}
+.font__info{
+    margin-top: 0;
+
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -ms-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
+}
+.font__info p{margin-bottom: 40px;}
+.font__info p span:first-child{
+    display: inline-block;
+    width: 100px;
+}
+.font__info ul li{margin-top: 4px;}
+.font__info ul li span:first-child{
+    display: inline-block;
+    width: 100px;
+}
+.font__info .bold{font-weight: 700;}
+.font__info .medium{font-weight: 500;}
+.font__info .regualr{font-weight: 400;}
+.font__info .light{font-weight: 300;}
+.color-wrap{
+    padding-top: 160px;
+}
+.color-wrap .name-wrap span{
+    color : #000000;
+    font-weight : 500;
+}
+.color{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:60px;
+    row-gap: 30px;
+}
+.color li {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.color .font-subtitle-w,
+.color .font-subtitle{
+    padding: 16px 32px 0 32px;
+}
+.color .font-body-w,
+.color .font-body{
+    padding: 0px 32px 16px 32px;
+}
+.color__primary{background: url(../img/nea/texure-noise.png),#906EFF;}
+.color__sub{background: url(../img/nea/texure-noise.png), #5484FF;}
+.color__gray{background: url(../img/nea/texure-noise.png), #353030;}
+.color__white{
+    background: #ffffff;
+    border: 2px solid #0000001a;
+    box-sizing: border-box;
+}
+/*------------------------ 컨셉1-디자인 시스템 ------------------------*/
+.system__image{width: 100%; height: auto;}
+.system__image img{width: 100%; height: auto;}
+.system-wrap{
+    width: 100%;
+    background:center / cover no-repeat url(../img/nea/bg-system.png); 
+}
+.system .name-wrap p span{
+    color: #000000;
+    font-weight: 500;
+}
+.system__list-wrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:3%;
+}
+.system__list{width: 100%;}
+.system__list li{
+    height: auto;
+    margin-bottom: 6%;
+} 
+.system__list li img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px #0000001a;
+} 
+
+/*------------------------ 컨셉2-디자인 시스템 ------------------------*/
+.soft-wrap { 
+    background:
+    linear-gradient(#ffffff 0%, #f5f5f5 100%);}
+.soft .name-wrap p span{
+    color : #000000;
+    font-weight: 500;
+}
+.soft__image{ 
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+}
+.soft__image img{ 
+    width: 100%;
+    height: auto;
+ }
+/*------------------------ 컨셉3-디자인 시스템 ------------------------*/
+
+.light-wrap .light{padding-bottom: 0px;}
+.light .name-wrap p span{
+    color : #000000;
+    font-weight: 500;
+}
+.light__image{
+    width: 100%;
+    height: auto;
+    padding-bottom: 160px;
+}
+.light__image img{
+    width: 100%;
+    height: auto;
+}
+/*------------------------ 스크린 ------------------------*/
+.screen-0{
+    width: 100%;
+    height: auto;
+    background: center / cover no-repeat url(../img/nea/bg-screen.png);
+    background-attachment: fixed;
+}
+.screen-0 .name-wrap{padding-bottom: 0;}
+.screen-0 .pj__description span{
+    color : #ffffff;
+    font-weight : 500;}
+.screen__screen{
+    width: 90%;
+    margin: auto;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.screen__screen video,
+.screen__screen img{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 10px solid #000000;
+}
+
+
+.screen-2{
+    background:center / cover no-repeat url(../img/nea/bg-system.png); 
+    background-attachment: fixed;
+}
+.step__com{
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+.step__com:last-child{height: calc(100% - 60px);}
+.step__com p{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #000000b3;
+}
+.step__com div{
+    position: absolute;
+    right: 15px;
+    width: 1px;
+    height: 100%;
+    margin: auto;
+    background-color: #0000004d;
+} 
+.step__com .step__com--hide{
+    opacity: 0;
+}
+.screen__step .step__image img{
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px #0000001a;
+    margin-bottom: 80px;
+}
+.screen__step .step__image p{
+    padding: 30px 0 20px;
+}
+.screen__step .step__image p span{
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 500;
+    color : #000000b3;
+}
+.screen-4{
+    background:
+    linear-gradient(#f5f5f5 0%, #ffffff 100%);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) { 
+    #banner-main{
+        background-attachment: scroll;
+    }
+   /* 컨셉 */
+   .concept-title-wrap{
+        background:
+        linear-gradient(#ffffff 20%, #ffffff00 20.1%),
+        url(../img/nea/texure-noise.png),
+        linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+    }
+    .concept__video{
+        width: 100%;
+
+        -webkit-transition: width 1s;
+        -moz-transition: width 1s;
+        -ms-transition: width 1s;
+        -o-transition: width 1s;
+        transition: width 1s;
+    }
+    .concept__concept{
+        width: 80%;
+
+        -webkit-transition: width 1s;
+        -moz-transition: width 1s;
+        -ms-transition: width 1s;
+        -o-transition: width 1s;
+        transition: width 1s;
+    }
+    .concept__circle{
+        width: 100%;
+        height: 80px;
+        padding-bottom: 0;
+        border-radius: 40px;
+
+        -webkit-transition:height 1s, padding-bottom 1s, border-radius 1s;
+        -moz-transition: height 1s, padding-bottom 1s, border-radius 1s;
+        -ms-transition: height 1s, padding-bottom 1s, border-radius 1s;
+        -o-transition: height 1s, padding-bottom 1s, border-radius 1s;
+        transition: height 1s, padding-bottom 1s, border-radius 1s;
+    }
+    .concept__plus{
+        width: 100%;
+        height: 80px;
+        padding-bottom: 0;
+
+        -webkit-transition: height 1s, padding-bottom 1s;
+        -moz-transition: height 1s, padding-bottom 1s;
+        -ms-transition: height 1s, padding-bottom 1s;
+        -o-transition: height 1s, padding-bottom 1s;
+        transition: height 1s, padding-bottom 1s;
+    }
+    /* 폰트 & 컬러 */
+    .font__info{
+        margin-top: 60px;
+
+        -webkit-transition: margin-top 1s;
+        -moz-transition: margin-top 1s;
+        -ms-transition: margin-top 1s;
+        -o-transition: margin-top 1s;
+        transition: margin-top 1s;
+    }
+    .color{ grid-template-columns: 1fr 1fr;}
+    
+    /* 어디든 */
+    .system__list-wrap{grid-template-columns: 1fr 1fr;}
+    .system__list-wrap > li:last-child{display: none;}
+    
+    .screen__video{ 
+        width: 100%;
+
+        -webkit-transition: width 1s;
+        -moz-transition: width 1s;
+        -ms-transition: width 1s;
+        -o-transition: width 1s;
+        transition: width 1s;
+    }
+    /* 스크린 */
+    .step__step{
+        width: 30px;
+        margin-right: 30px;
+    }
+    .screen__step .column4 .column4-13{
+        grid-column: 2 / 5;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .color{grid-template-columns: 1fr;}
+    .system__list-wrap{grid-template-columns: 1fr;}
+}
