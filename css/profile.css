@@ -1,10 +1,10 @@
-/* Preser */
+/* Preset */
 header{
     position: sticky;
 }
 .contents{opacity: 0; top:50px;}
 #header__title{opacity: 0;}
-/* layout */
+/* layout & Concept */
 .profile{
     width: 100%;
 }
@@ -13,12 +13,28 @@ header{
     height: auto;
     margin: auto;
 }
+.profile__concept{
+    width: 100%;
+    height: auto;
+    margin-bottom: 120px;
+}
+.concept__video{
+    width: 100%;
+    height: 200px;
+}
+.concept__video video{
+    width: 100%;
+    height: 200px;
+}
+.profile__concept .concept__tet{
+    text-align: center;
+}
 .profile__top, .profile__bottom{
     display: flex;
     align-items: stretch;
 }
 .profile__bottom{
-    margin: 120px 0px;
+    margin: 120px 0px 0px 0px;
 }
 .action, .career{
     width: calc(50% - 30px);
@@ -31,7 +47,7 @@ header{
     height: 100%;
 }
 /* skill */
-.skill__name{margin-bottom: 60px;}
+/* .skill__name{margin-bottom: 60px;} */
 .skill__skill li{margin-bottom: 30px;}
 .skill__skill li:last-child{margin-bottom: 0px;}
 .skill__info{

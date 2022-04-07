@@ -29,31 +29,11 @@
 
 /*------------------------ 이슈 / 골 ------------------------*/
 .concept-title-wrap{
-    background:
-    linear-gradient(#ffffff 30%, #ffffff00 30.1%),
-    url(../img/nea/texure-noise.png),
-    linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+    background:url(../img/nea/img-concept.png);
+    background-size: cover;
+    background-position: center center;
 }
-.concept__video{
-    width: 80%;
-    margin: auto;
-
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    -ms-transition: width 1s;
-    -o-transition: width 1s;
-    transition: width 1s;
-}
-.concept__video video{
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    border-radius: 30px;
-    border: 10px solid #000000;
-}
-
 .concept-title-wrap .name-wrap{
-    padding-top: 80px;
     padding-bottom: 0px;
 }
 .concept-title .pj__description span{
@@ -188,6 +168,7 @@
 .system-wrap{
     width: 100%;
     background:center / cover no-repeat url(../img/nea/bg-system.png); 
+    background-attachment: fixed;
 }
 .system .name-wrap p span{
     color: #000000;
@@ -240,22 +221,58 @@
     width: 100%;
     height: auto;
     padding-bottom: 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:60px;
 }
-.light__image img{
+.light__image div:first-child{padding-right: 0px;
+    -webkit-transition: padding-right 1s;
+    -moz-transition: padding-right 1s;
+    -ms-transition: padding-right 1s;
+    -o-transition: padding-right 1s;
+    transition: padding-right 1s;
+}
+.light__image div:last-child{padding-left: 0px;
+    -webkit-transition: padding-left 1s;
+    -moz-transition: padding-left 1s;
+    -ms-transition: padding-left 1s;
+    -o-transition: padding-left 1s;
+    transition: padding-left 1s;
+}
+.light__image div img{
     width: 100%;
     height: auto;
 }
 /*------------------------ 스크린 ------------------------*/
-.screen-0{
+.screen-title-wrap{
+    background:
+    linear-gradient(#ffffff 30%, #ffffff00 30.1%),
+    url(../img/nea/texure-noise.png),
+    linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+} 
+.screen-title-wrap .name-wrap{
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+.screen__video{
+    width: 80%;
+    margin: auto;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.screen__video video{
     width: 100%;
     height: auto;
-    background: center / cover no-repeat url(../img/nea/bg-screen.png);
-    background-attachment: fixed;
-}
-.screen-0 .name-wrap{padding-bottom: 0;}
-.screen-0 .pj__description span{
-    color : #ffffff;
-    font-weight : 500;}
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 10px solid #000000;
+} 
+
+
 .screen__screen{
     width: 90%;
     margin: auto;
@@ -277,57 +294,35 @@
 
 
 .screen-2{
-    background:center / cover no-repeat url(../img/nea/bg-system.png); 
-    background-attachment: fixed;
+    background-color: #f5f5f5;
 }
-.step__com{
-    position: relative;
+.screen-2 .con-inner {
+    padding: 160px 0 0 0;
+}
+.screen-2 .name-wrap{
+    padding-bottom: 0px;
+}
+.screen__screen-full{
     width: 100%;
-    height: 30px;
+    padding-bottom: 75%;
+    background-image: url(../img/nea/img-step.png);
+    background-size: cover;
+    background-position: top center;
+
+    -webkit-transition: padding-bottom 1s, height 1s;
+    -moz-transition: padding-bottom 1s, height 1s;
+    -ms-transition: padding-bottom 1s, height 1s;
+    -o-transition: padding-bottom 1s, height 1s;
+    transition: padding-bottom 1s, height 1s;
 }
-.step__com:last-child{height: calc(100% - 60px);}
-.step__com p{
-    position: absolute;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    color: #ffffff;
-    font-weight: 500;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #000000b3;
-}
-.step__com div{
-    position: absolute;
-    right: 15px;
-    width: 1px;
-    height: 100%;
-    margin: auto;
-    background-color: #0000004d;
-} 
-.step__com .step__com--hide{
-    opacity: 0;
-}
-.screen__step .step__image img{
-    width: 100%; 
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px #0000001a;
-    margin-bottom: 80px;
-}
-.screen__step .step__image p{
-    padding: 30px 0 20px;
-}
-.screen__step .step__image p span{
-    display: inline-block;
-    padding-right: 20px;
-    font-weight: 500;
-    color : #000000b3;
-}
-.screen-4{
-    background:
-    linear-gradient(#f5f5f5 0%, #ffffff 100%);
+.screen-3 .con-inner{
+    padding: 160px 0 80px 0;
+
+    -webkit-transition: padding 1s;
+    -moz-transition: padding 1s;
+    -ms-transition: padding 1s;
+    -o-transition: padding 1s;
+    transition: padding 1s;
 }
 
 
@@ -341,21 +336,7 @@
         background-attachment: scroll;
     }
    /* 컨셉 */
-   .concept-title-wrap{
-        background:
-        linear-gradient(#ffffff 20%, #ffffff00 20.1%),
-        url(../img/nea/texure-noise.png),
-        linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
-    }
-    .concept__video{
-        width: 100%;
 
-        -webkit-transition: width 1s;
-        -moz-transition: width 1s;
-        -ms-transition: width 1s;
-        -o-transition: width 1s;
-        transition: width 1s;
-    }
     .concept__concept{
         width: 80%;
 
@@ -404,6 +385,28 @@
     .system__list-wrap{grid-template-columns: 1fr 1fr;}
     .system__list-wrap > li:last-child{display: none;}
     
+
+    /* 가볍게 */
+    .light__image{
+        grid-template-columns: 1fr;
+    }
+    .light__image div:first-child{padding-right: 80px;
+
+        -webkit-transition: padding-right 1s;
+        -moz-transition: padding-right 1s;
+        -ms-transition: padding-right 1s;
+        -o-transition: padding-right 1s;
+        transition: padding-right 1s;
+    }
+    .light__image div:last-child{padding-left: 80px;
+
+        -webkit-transition: padding-left 1s;
+        -moz-transition: padding-left 1s;
+        -ms-transition: padding-left 1s;
+        -o-transition: padding-left 1s;
+        transition: padding-left 1s;
+    }
+
     .screen__video{ 
         width: 100%;
 
@@ -414,6 +417,20 @@
         transition: width 1s;
     }
     /* 스크린 */
+
+   .screen-title-wrap{
+        background:
+        linear-gradient(#ffffff 20%, #ffffff00 20.1%),
+        url(../img/nea/texure-noise.png),
+        linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+    }
+    .screen__screen-full{
+        width: 100%;
+        padding-bottom: 75%;
+        background-image: url(../img/nea/img-step.png);
+        background-size: cover;
+        background-position: top center;
+    }
     .step__step{
         width: 30px;
         margin-right: 30px;
@@ -421,9 +438,48 @@
     .screen__step .column4 .column4-13{
         grid-column: 2 / 5;
     }
+    .screen__screen-full{
+        padding-bottom: 0%;
+        height: 600px;
+
+        -webkit-transition: padding-bottom 1s, height 1s;
+        -moz-transition: padding-bottom 1s, height 1s;
+        -ms-transition: padding-bottom 1s, height 1s;
+        -o-transition: padding-bottom 1s, height 1s;
+        transition: padding-bottom 1s, height 1s;
+    }
+    
+    
+    .screen-3 .con-inner{
+        padding: 160px 0 160px 0;
+
+        -webkit-transition: padding 1s;
+        -moz-transition: padding 1s;
+        -ms-transition: padding 1s;
+        -o-transition: padding 1s;
+        transition: padding 1s;
+    }
     
 }
 @media screen and (max-width: 480px) {
     .color{grid-template-columns: 1fr;}
     .system__list-wrap{grid-template-columns: 1fr;}
+
+    /* 가볍게 */
+    .light__image div:first-child{padding-right: 32px;
+
+        -webkit-transition: padding-right 1s;
+        -moz-transition: padding-right 1s;
+        -ms-transition: padding-right 1s;
+        -o-transition: padding-right 1s;
+        transition: padding-right 1s;
+    }
+    .light__image div:last-child{padding-left: 32px;
+
+        -webkit-transition: padding-left 1s;
+        -moz-transition: padding-left 1s;
+        -ms-transition: padding-left 1s;
+        -o-transition: padding-left 1s;
+        transition: padding-left 1s;
+    }
 }
