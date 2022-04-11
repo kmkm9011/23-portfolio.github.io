@@ -4,7 +4,7 @@
 #header{ opacity: 0;}
 .contents{ opacity: 0; top: 100px;}
 #banner-main{
-    background: center / cover no-repeat url(../img/nea/banner-main.png);
+    background: center / cover no-repeat url(../img/nea-branding/banner-main.png);
     background-attachment: fixed;
 }
 .info__bar{width: 100%;}
@@ -324,7 +324,7 @@
 /*------------------------ 뉴스 ------------------------*/
 .new-wrap .con-inner{
     padding: 160px 0 0 0;
-    
+
     -webkit-transition: padding 1s;
     -moz-transition: padding 1s;
     -ms-transition: padding 1s;
@@ -333,36 +333,19 @@
 }
 .news__list{
     row-gap: 80px;
-    margin-top: 80px;
 }
-.news__list > li{
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-.news__list > li:last-child{margin-bottom: 0px;}
-.news__list > li > div:first-child{
-	flex-shrink: 0;
-	width: 160px;
-    height: 160px;
+.news__list > li > div{
+    width: 100%;
+    padding-bottom: 75%;
     background-size: cover;
     background-position: center center;
     border-radius: 8px;
-
-    -webkit-transition:height 1s, width 1s;
-    -moz-transition: height 1s, width 1s;
-    -ms-transition: height 1s, width 1s;
-    -o-transition: height 1s, width 1s;
-    transition: height 1s, width 1s;
-}
-.news-info{
-    width:auto;
-    padding-left:32px;
-    flex-basis: content;
+    margin-bottom: 16px;
 }
 .news-1{background:url(../img/nea/img-new1.jpeg);}
 .news-2{background:url(../img/nea/img-new2.jpeg);}
-.news__list li button{margin-top: 16px;}
+.news__list > li > button{margin-top: 16px;
+}
 
 
 
@@ -485,19 +468,17 @@
         -o-transition: padding-bottom 1s, height 1s;
         transition: padding-bottom 1s, height 1s;
     }
+    
+    
     .new-wrap .con-inner{
-        padding: 160px 0 60px 0;
-        
+        padding: 160px 0 80px 0;
+
         -webkit-transition: padding 1s;
         -moz-transition: padding 1s;
         -ms-transition: padding 1s;
         -o-transition: padding 1s;
         transition: padding 1s;
     }
-
-    
-    
-  
     
 }
 @media screen and (max-width: 480px) {
@@ -521,17 +502,4 @@
         -o-transition: padding-left 1s;
         transition: padding-left 1s;
     }
-    /* 뉴스 */
-    .news__list > li > div:first-child{
-        width: 100px;
-        height: 100px;
-    
-        -webkit-transition:height 1s, width 1s;
-        -moz-transition: height 1s, width 1s;
-        -ms-transition: height 1s, width 1s;
-        -o-transition: height 1s, width 1s;
-        transition: height 1s, width 1s;
-    }
-    .news-info{padding-left: 24px;}
-    .news-info .font-title{font: 500 18px / 24px 'Noto Sans KR', sans-serif;}
 }
