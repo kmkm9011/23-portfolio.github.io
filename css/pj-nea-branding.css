@@ -4,13 +4,13 @@
 #header{ opacity: 0;}
 .contents{ opacity: 0; top: 100px;}
 #banner-main{
-    background: center / cover no-repeat url(../img/nea-branding/banner-main.webp);
+    background: center / cover no-repeat url(../img/nea-branding/banner-main.png);
     background-attachment: fixed;
 }
 .info__bar{width: 100%;}
 /* ------ 오버뷰 ------ */
 .overview-wrap{
-    background: center / cover no-repeat url(../img/nea-branding/bg-overview.webp);
+    background: center / cover no-repeat url(../img/nea-branding/bg-overview.png);
 }
 /* ------ 리서치 ------ */
 .research button{margin-top: 24px;margin-right: 8px;}
@@ -29,7 +29,7 @@
 
 /*------------------------ 이슈 / 골 ------------------------*/
 .concept-title-wrap{
-    background:url(../img/nea-branding/img-concept.webp);
+    background:url(../img/nea-branding/img-concept.png);
     background-size: cover;
     background-position: center center;
 }
@@ -122,7 +122,7 @@
 
 /*------------------------ 통일성 ------------------------*/
 .shape-wrap{
-    background-image: url("../img/nea-branding/bg-shape.webp");
+    background-image: url("../img/nea-branding/bg-shape.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -371,51 +371,51 @@
 .nea .element1 div,
 .neg .element1 div,
 .nem .element1 div
-{background-image: url(../img/nea-branding/img-bigdata.webp);}
-.neo .element2 div{background-image: url(../img/nea-branding/img-neo1.webp);}
-.neo .element3 div{background-image: url(../img/nea-branding/img-neo2.webp);}
-.neo .element4 div{background-image: url(../img/nea-branding/img-neo3.webp);}
+{background-image: url(../img/nea-branding/img-bigdata.png);}
+.neo .element2 div{background-image: url(../img/nea-branding/img-neo1.png);}
+.neo .element3 div{background-image: url(../img/nea-branding/img-neo2.png);}
+.neo .element4 div{background-image: url(../img/nea-branding/img-neo3.png);}
 
-.neb .element2 div{background-image: url(../img/nea-branding/img-neb1.webp);}
-.neb .element3 div{background-image: url(../img/nea-branding/img-neb2.webp);}
-.neb .element4 div{background-image: url(../img/nea-branding/img-neb3.webp);}
+.neb .element2 div{background-image: url(../img/nea-branding/img-neb1.png);}
+.neb .element3 div{background-image: url(../img/nea-branding/img-neb2.png);}
+.neb .element4 div{background-image: url(../img/nea-branding/img-neb3.png);}
 
-.ncs .element2 div{background-image: url(../img/nea-branding/img-ncs1.webp);}
-.ncs .element3 div{background-image: url(../img/nea-branding/img-ncs2.webp);}
-.ncs .element4 div{background-image: url(../img/nea-branding/img-ncs3.webp);}
+.ncs .element2 div{background-image: url(../img/nea-branding/img-ncs1.png);}
+.ncs .element3 div{background-image: url(../img/nea-branding/img-ncs2.png);}
+.ncs .element4 div{background-image: url(../img/nea-branding/img-ncs3.png);}
 
-.nev .element2 div{background-image: url(../img/nea-branding/img-nev1.webp);}
-.nev .element3 div{background-image: url(../img/nea-branding/img-nev2.webp);}
-.nev .element4 div{background-image: url(../img/nea-branding/img-nev3.webp);}
+.nev .element2 div{background-image: url(../img/nea-branding/img-nev1.png);}
+.nev .element3 div{background-image: url(../img/nea-branding/img-nev2.png);}
+.nev .element4 div{background-image: url(../img/nea-branding/img-nev3.png);}
 
-.nes .element2 div{background-image: url(../img/nea-branding/img-nes1.webp);}
-.nes .element3 div{background-image: url(../img/nea-branding/img-nes2.webp);}
-.nes .element4 div{background-image: url(../img/nea-branding/img-nes3.webp);}
+.nes .element2 div{background-image: url(../img/nea-branding/img-nes1.png);}
+.nes .element3 div{background-image: url(../img/nea-branding/img-nes2.png);}
+.nes .element4 div{background-image: url(../img/nea-branding/img-nes3.png);}
 
-.ndc .element2 div{background-image: url(../img/nea-branding/img-ndc1.webp);}
-.ndc .element3 div{background-image: url(../img/nea-branding/img-ndc2.webp);}
-.ndc .element4 div{background-image: url(../img/nea-branding/img-ndc3.webp);}
+.ndc .element2 div{background-image: url(../img/nea-branding/img-ndc1.png);}
+.ndc .element3 div{background-image: url(../img/nea-branding/img-ndc2.png);}
+.ndc .element4 div{background-image: url(../img/nea-branding/img-ndc3.png);}
 
-.nef .element2 div{background-image: url(../img/nea-branding/img-nef1.webp);}
-.nef .element3 div{background-image: url(../img/nea-branding/img-nef2.webp);}
-.nef .element4 div{background-image: url(../img/nea-branding/img-nef3.webp);}
+.nef .element2 div{background-image: url(../img/nea-branding/img-nef1.png);}
+.nef .element3 div{background-image: url(../img/nea-branding/img-nef2.png);}
+.nef .element4 div{background-image: url(../img/nea-branding/img-nef3.png);}
 
-.ned .element2 div{background-image: url(../img/nea-branding/img-ned1.webp);}
-.ned .element3 div{background-image: url(../img/nea-branding/img-ned2.webp);}
-.ned .element4 div{background-image: url(../img/nea-branding/img-ned3.webp);}
+.ned .element2 div{background-image: url(../img/nea-branding/img-ned1.png);}
+.ned .element3 div{background-image: url(../img/nea-branding/img-ned2.png);}
+.ned .element4 div{background-image: url(../img/nea-branding/img-ned3.png);}
 
-.nea .element2 div{background-image: url(../img/nea-branding/img-nea1.webp);}
-.nea .element3 div{background-image: url(../img/nea-branding/img-nea2.webp);}
-.nea .element4 div{background-image: url(../img/nea-branding/img-nea3.webp);}
+.nea .element2 div{background-image: url(../img/nea-branding/img-nea1.png);}
+.nea .element3 div{background-image: url(../img/nea-branding/img-nea2.png);}
+.nea .element4 div{background-image: url(../img/nea-branding/img-nea3.png);}
 
-.neg .element1 div{background-image: url(../img/nea-branding/img-neg1.webp);}
-.neg .element2 div{background-image: url(../img/nea-branding/img-neg2.webp);}
-.neg .element3 div{background-image: url(../img/nea-branding/img-neg3.webp);}
-.neg .element4 div{background-image: url(../img/nea-branding/img-neg4.webp);}
+.neg .element1 div{background-image: url(../img/nea-branding/img-neg1.png);}
+.neg .element2 div{background-image: url(../img/nea-branding/img-neg2.png);}
+.neg .element3 div{background-image: url(../img/nea-branding/img-neg3.png);}
+.neg .element4 div{background-image: url(../img/nea-branding/img-neg4.png);}
 
-.nem .element2 div{background-image: url(../img/nea-branding/img-nem1.webp);}
-.nem .element3 div{background-image: url(../img/nea-branding/img-nem2.webp);}
-.nem .element4 div{background-image: url(../img/nea-branding/img-nem3.webp);}
+.nem .element2 div{background-image: url(../img/nea-branding/img-nem1.png);}
+.nem .element3 div{background-image: url(../img/nea-branding/img-nem2.png);}
+.nem .element4 div{background-image: url(../img/nea-branding/img-nem3.png);}
 
 .logo-contents .logo-image{
     width: 100%;
@@ -426,7 +426,7 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-    background-image:url("../img/nea-branding/img-logo-bg.webp");
+    background-image:url("../img/nea-branding/img-logo-bg.png");
 
     -webkit-transition: height 1s;
     -moz-transition: height 1s;
@@ -603,17 +603,17 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
-.mockup-neo{background-image: url("../img/nea-branding/img-mockup-neo.webp");}
-.mockup-neb{background-image: url("../img/nea-branding/img-mockup-neb.webp");}
-.mockup-ncs{background-image: url("../img/nea-branding/img-mockup-ncs.webp");}
-.mockup-nev{background-image: url("../img/nea-branding/img-mockup-nev.webp");} 
-.mockup-nes{background-image: url("../img/nea-branding/img-mockup-nes.webp");}
-.mockup-ndc{background-image: url("../img/nea-branding/img-mockup-ndc.webp");}
-.mockup-nef{background-image: url("../img/nea-branding/img-mockup-nef.webp");}
-.mockup-ned{background-image: url("../img/nea-branding/img-mockup-ned.webp");}
-.mockup-nea{background-image: url("../img/nea-branding/img-mockup-nea.webp");}
-.mockup-neg{background-image: url("../img/nea-branding/img-mockup-neg.webp");}
-.mockup-nem{background-image: url("../img/nea-branding/img-mockup-nem.webp");}
+.mockup-neo{background-image: url("../img/nea-branding/img-mockup-neo.png");}
+.mockup-neb{background-image: url("../img/nea-branding/img-mockup-neb.png");}
+.mockup-ncs{background-image: url("../img/nea-branding/img-mockup-ncs.png");}
+.mockup-nev{background-image: url("../img/nea-branding/img-mockup-nev.png");} 
+.mockup-nes{background-image: url("../img/nea-branding/img-mockup-nes.png");}
+.mockup-ndc{background-image: url("../img/nea-branding/img-mockup-ndc.png");}
+.mockup-nef{background-image: url("../img/nea-branding/img-mockup-nef.png");}
+.mockup-ned{background-image: url("../img/nea-branding/img-mockup-ned.png");}
+.mockup-nea{background-image: url("../img/nea-branding/img-mockup-nea.png");}
+.mockup-neg{background-image: url("../img/nea-branding/img-mockup-neg.png");}
+.mockup-nem{background-image: url("../img/nea-branding/img-mockup-nem.png");}
 
 .logo-ver-wrap .con-inner{
     padding: 140px 0 0 0;
