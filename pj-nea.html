@@ -22,6 +22,7 @@
     <script>
         $(document).ready(function(){
             // import html
+            $("#loading").load("./html/loading.html"); 
             $("#menu").load("./html/menu.html"); 
             $("#header").load("./html/header.html");
             $("#pj-info").load("./html/pj-info.html", function(){
@@ -45,6 +46,7 @@
 
             // animation
             window.onload = function () {
+                $("#loading").fadeOut(300);
                 $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
                 $("#header").stop().animate({ opacity : "1"}, 1000);
             }
@@ -53,6 +55,7 @@
     </script>
 </head>
 <body>
+    <div id="loading"></div>
     <div id="menu"></div>
     <header id="header"></header>
     <div class="contents">
