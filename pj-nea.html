@@ -20,9 +20,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./js/pj-general.js"></script>
     <script>
+        // 새로고침 시 스크롤 탑
+        history.scrollRestoration = "manual"
+        // 뒤로가기로 진입 시 새로고침
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                location.reload();
+                $('html').scrollTop(0);
+            }
+            else { }
+        };
         $(document).ready(function(){
             // import html
-            $("#loading").load("./html/loading.html"); 
             $("#menu").load("./html/menu.html"); 
             $("#header").load("./html/header.html");
             $("#pj-info").load("./html/pj-info.html", function(){
@@ -50,12 +59,17 @@
                 $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
                 $("#header").stop().animate({ opacity : "1"}, 1000);
             }
-        });
-       
+        });       
     </script>
 </head>
 <body>
-    <div id="loading"></div>
+    <div id="loading">
+        <video muted autoplay loop playsinline>
+            <source src="./img/loading.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+    </div>
+    
     <div id="menu"></div>
     <header id="header"></header>
     <div class="contents">
