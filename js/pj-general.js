@@ -53,35 +53,35 @@ function header1920(){
 
 // 480 header 설정
 function headerResize480(){
-    $("header").stop().animate({ height : "60px"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
+    $("header").stop().animate({ height : "60px", opacity : "1"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
     $("#menu__open").stop().animate({ width : "24px", height : "24px", padding : "18px 32px"}, 300);
     $("#logo").stop().animate({ width : "24px", height : "24px", padding : "18px 32px"}, 300);
 }
 function headerDefault480(){
-    $("header").stop().animate({ height : "100px"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
+    $("header").stop().animate({ height : "100px", opacity : "1"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
     $("#menu__open").stop().animate({ width : "30px", height : "30px", padding : "35px 32px"}, 300);
     $("#logo").stop().animate({ width : "30px", height : "30px", padding : "35px 32px"}, 300);
 }
 
 // 960 header 설정
 function headerResize960(){
-    $("header").stop().animate({ height : "60px"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
+    $("header").stop().animate({ height : "60px", opacity : "1"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
     $("#menu__open").stop().animate({ width : "24px", height : "24px", padding : "18px 60px"}, 300);
     $("#logo").stop().animate({ width : "24px", height : "24px", padding : "18px 60px"}, 300);
 }
 function headerDefault960(){
-    $("header").stop().animate({ height : "100px"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
+    $("header").stop().animate({ height : "100px", opacity : "1"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
     $("#menu__open").stop().animate({ width : "30px", height : "30px", padding : "35px 60px"}, 300);
     $("#logo").stop().animate({ width : "30px", height : "30px", padding : "35px 60px"}, 300);
 }
 // 1920 header 설정
 function headerResize1920(){
-    $("header").stop().animate({ height : "60px"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
+    $("header").stop().animate({ height : "60px", opacity : "1"}, 300).css({"background-color":"#ffffff", "box-shadow":"0 10px 10px #0000000d"}); 
     $("#menu__open").stop().animate({ width : "24px", height : "24px", padding : "18px 100px"}, 300);
     $("#logo").stop().animate({ width : "24px", height : "24px", padding : "18px 100px"}, 300);
 }
 function headerDefault1920(){
-    $("header").stop().animate({ height : "160px"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
+    $("header").stop().animate({ height : "160px", opacity : "1"}, 300).css({"background-color":"#ffffff00", "box-shadow":"0 10px 10px #00000000"});  
     $("#menu__open").stop().animate({ width : "40px", height : "40px", padding : "60px 100px"}, 300);
     $("#logo").stop().animate({ width : "40px", height : "40px", padding : "60px 100px"}, 300);
 }

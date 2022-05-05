@@ -22,6 +22,7 @@
     <script>
         // 새로고침&앞으로가기 시 스크롤 탑
         history.scrollRestoration = "manual"
+        $('html').scrollTop(0);
         // 뒤로가기로 진입 시 새로고침
         window.onpageshow = function (event) {
             if (event.persisted) {
