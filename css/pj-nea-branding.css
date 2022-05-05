@@ -119,6 +119,18 @@
     border-radius: 8px;
 }
 
+.neo-bar{background:linear-gradient(90deg,#ff5b7b 0%, #ffa79d 100%);}
+.neb-bar{background:linear-gradient(90deg,#ff6666 0%, #ff9933 100%);}
+.ncs-bar{background:linear-gradient(90deg,#ff8b7b 0%, #ffcc33 100%);}
+.nev-bar{background:linear-gradient(90deg,#00b2d2 0%, #07cb95 100%);}
+.nes-bar{background:linear-gradient(90deg,#0065fd 0%, #00d2c5 100%);}
+.ndc-bar{background:linear-gradient(90deg,#5b5dff 0%, #4dd7ff 100%);}
+.nef-bar{background:linear-gradient(90deg,#7747d9 0%, #4cece6 100%);}
+.ned-bar{background:linear-gradient(90deg,#c455d1 0%, #30a8f4 100%);}
+.nea-bar{background:linear-gradient(90deg,#906EFF 0%, #5484FF 100%);}
+.neg-bar{background:linear-gradient(90deg,#c853d0 0%, #ff9999 100%);}
+.nem-bar{background:linear-gradient(90deg,#c471f5 0%, #fa71cd 100%);}
+
 
 /*------------------------ 통일성 ------------------------*/
 .shape-wrap{
@@ -243,27 +255,6 @@
 .produce-wrap .produce-bottom img{width: 100%; height: auto;}
 /*------------------------ 로고 ------------------------*/
 
-.logo-wrap .con-inner{
-    padding: 0 0 160px 0;
-}
-.top-bar{
-    margin-bottom: 160px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-}
-.logo-wrap .neo-bar{background:none;}
-.neo-bar{background:linear-gradient(90deg,#ff5b7b 0%, #ffa79d 100%);}
-.neb-bar{background:linear-gradient(90deg,#ff6666 0%, #ff9933 100%);}
-.ncs-bar{background:linear-gradient(90deg,#ff8b7b 0%, #ffcc33 100%);}
-.nev-bar{background:linear-gradient(90deg,#00b2d2 0%, #07cb95 100%);}
-.nes-bar{background:linear-gradient(90deg,#0065fd 0%, #00d2c5 100%);}
-.ndc-bar{background:linear-gradient(90deg,#5b5dff 0%, #4dd7ff 100%);}
-.nef-bar{background:linear-gradient(90deg,#7747d9 0%, #4cece6 100%);}
-.ned-bar{background:linear-gradient(90deg,#c455d1 0%, #30a8f4 100%);}
-.nea-bar{background:linear-gradient(90deg,#906EFF 0%, #5484FF 100%);}
-.neg-bar{background:linear-gradient(90deg,#c853d0 0%, #ff9999 100%);}
-.nem-bar{background:linear-gradient(90deg,#c471f5 0%, #fa71cd 100%);}
 .logo-contents{
     display: grid;
     grid-template-columns: 1fr;
