@@ -6,19 +6,9 @@ $(document).ready(function(){
 
 // 메뉴 애니메이션
 function menuAction(){
-    // $("#menu").hide().animate({ opacity : "0"});
-    $(".menu__bg").animate({ right : "-200px"});
-    $('#menu__open').on("click" , function(){
-        menuOpen();
-        console.log( $('#menu__open') );
-      });
-    // $('#menu__open').on("click" , function(){menuOpen();});
-    // $("#header").contents().find('#menu__open').on("click" , function(){menuOpen();});
     $('#menu__close').on("click" , function(){menuClose();});
-
+    $('#menu').on("click" , function(){menuClose();});
     menuLink();
-
-    
 }
 function menuOpen(){
     $("#menu").show().animate({ opacity : "1"}, 300);
