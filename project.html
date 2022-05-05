@@ -20,6 +20,16 @@
     <script defer src="js/project.js"></script>
     <script defer src="js/general.js"></script>
     <script>
+        // 새로고침 시 스크롤 탑
+        history.scrollRestoration = "manual"
+        // 뒤로가기로 진입 시 새로고침
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                location.reload();
+                $('html').scrollTop(0);
+            }
+            else { }
+        };
         $(document).ready(function(){
             // import html
             $("#menu").load("./html/menu.html"); 
@@ -76,17 +86,7 @@
 
 
             
-            <li class="ndc">
-                <div class="project__info">
-                    <div class="project__info-wrap">
-                        <p class="project__title font-title-w">NexR Data cloud</br>Comming Soon</p>
-                        <p class="project__description font-description-w">데이터 클라우드 서비스</p>
-                        <div class="project__arrow">
-                            <img src="./img/arrow-right.svg">
-                        </div>
-                    </div>
-                </div>
-            </li>
+            
         </ul>
     </div>
     

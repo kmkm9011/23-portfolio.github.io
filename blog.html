@@ -19,6 +19,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="js/general.js"></script>
     <script>
+        // 새로고침 시 스크롤 탑
+        history.scrollRestoration = "manual"
+        // 뒤로가기로 진입 시 새로고침
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                location.reload();
+                $('html').scrollTop(0);
+            }
+            else { }
+        };
         $(document).ready(function(){
             // import html
             $("#menu").load("./html/menu.html"); 
