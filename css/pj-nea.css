@@ -2,7 +2,6 @@
 /* ------ 공통 영역 ------ */
 
 #header{ opacity: 0;}
-.contents{ opacity: 0; top: 100px;}
 #banner-main{
     background: center / cover no-repeat url(../img/nea/banner-main.png);
     background-attachment: fixed;

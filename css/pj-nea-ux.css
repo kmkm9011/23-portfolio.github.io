@@ -1,111 +1,242 @@
-.banner-main{
-    background: center / cover no-repeat url(../img/nea-ux/banner-1.png);
-}
-.info__bar{
-    width: 100%;
-}
 
+/* ------ 공통 영역 ------ */
+
+#header{ opacity: 0;}
+/* .contents{ opacity: 0; top: 100px;} */
+#banner-main{
+    background: center / cover no-repeat url(../img/nea-ux/banner-main.png);
+    background-attachment: fixed;
+}
+.info__bar{width: 80%;}
 /* ------ 오버뷰 ------ */
 .overview-wrap{
-    background: center / cover no-repeat url(../img/nea/overview.png);
+    background: center / cover no-repeat url(../img/nea-ux/bg-overview.png);
+}
+/* ------ 리서치 ------ */
+.research button{margin-top: 24px;margin-right: 8px;}
+.research-bottom{
+    width: 100%;
+    height: auto;
+}
+.research-bottom img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* ------ 리서치 ------ */
-.research__competitors{
-    margin-bottom: 80px;
+
+
+
+/*------------------------ 이슈 / 골 ------------------------*/
+.concept-title-wrap{
+    background:url(../img/nea-ux/img-concept.png);
+    background-size: cover;
+    background-position: center center;
 }
-.research__competitors .pj__description,
-.research__doc .pj__description{
-    padding: 10px 0 40px;
+.concept-title-wrap .name-wrap{
+    padding-bottom: 0px;
 }
-.research__competitors .image-wrap{
+.concept-title .pj__description span{
+    color : #ffffff;
+    font-weight : 500;
+}
+.concept__concept{
     width: 100%;
+    margin: auto;
+    margin-top: 80px;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.concept__concept ul{
+    width: 100%; 
     height: auto;
-}
-.research__btn-wrap{
-    display: block;
-    width: 100%;
-    margin-top: 12px;
-}
-.research__doc .image-wrap{
-    width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
-.image-wrap img{
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow : 0 4px 10px #0000001a, 0 0 5px #0000000d;
+.concept__circle{
+    box-sizing: border-box;
+    position: relative;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+
+    -webkit-transition:height 1s, padding-bottom 1s, border-radius 1s;
+    -moz-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    -ms-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    -o-transition: height 1s, padding-bottom 1s, border-radius 1s;
+    transition: height 1s, padding-bottom 1s, border-radius 1s;
 }
-.research__doc .image-wrap div{
-    width: calc(33.33% - 40px);
+.concept__plus{
+    position: relative;
+    width: 12.5%;
+    padding-bottom: 12.5%;
+
+    -webkit-transition: height 1s, padding-bottom 1s;
+    -moz-transition: height 1s, padding-bottom 1s;
+    -ms-transition: height 1s, padding-bottom 1s;
+    -o-transition: height 1s, padding-bottom 1s;
+    transition: height 1s, padding-bottom 1s;
 }
-.research__arrow{
+.concept__concept ul li div{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
     width: 100%;
-    height: 120px;
+    height: 100%;
+}
+.concept__concept ul li div p{
+    width: 100%;
+    text-align: center;
+}
+
+/*------------------------ 쉽게 ------------------------*/
+.easy{
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+}
+.easy .easy__before,
+.easy .easy__after{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+.easy li p{
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 12px;
+    line-height: 20px;
+    color : #777;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.easy .easy__arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.easy .easy__arrow img{
+    width: 30px;
+    opacity: 0.5;
+}
+
+.step .step__doc{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+.step .step__doc li{
+    cursor: pointer;
+}
+.step .step__doc li a{
+    display: block;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-bottom: 150%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.step__doc1 a{
+    background-image: url("../img/nea-ux/img-doc1.png");
+    background-color: #dcf3f1;
+}
+.step__doc2 a{background-image: url("../img/nea-ux/img-doc2.png");}
+.step__doc3 a{background-image: url("../img/nea-ux/img-doc3.png");}
+.step__doc4 a{background-image: url("../img/nea-ux/img-doc4.png");}
+.step__doc5 a{background-image: url("../img/nea-ux/img-doc5.png");}
+
+.step-list{
+    margin-top: 80px;
+}
+.step-list > li{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap:20px
+}
+.step-list li .step__con{
+    grid-column: 2 / 6;
+}
+.step-list .step__step .title-wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 26px;
+}
+.step-list .step__step .num{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
     display: flex;
     align-items: center;
 }
-.research__arrow div{
-    width: 40px;
-    margin: auto;
-}
-.research__arrow div img{
+.step-list .step__step .num p{
     width: 100%;
     height: 100%;
-    opacity: 50%;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #444;
 }
-/* ------ 브랜드 ------ */
-.brand-wrap{
-    background: #f5f5f5;
+.step-list .step__step .line{
+    width: 24px;
+    height: calc(100% - 24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.brand__add{
-    width: 100%;
-    height: 200px;
-    margin-bottom: 40px;
-    background-color: red;
+.step-list .step__step .line div{
+    width: 2px;
+    height: calc(100% - 40px);
+    background-color: #eee;
 }
-.brand__full{
-    width: 100%;
-    height: 400px;
-    background-color: blue;
-}
-.brand .btn-wrap{
-    margin-top: 40px;
+.step__con img{
     width: 100%;
     height: auto;
+    margin-top: 16px;
+    border: 1px ;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    margin-bottom: 60px;
 }
-.brand .btn-wrap .btn{
-    width: 260px;
-    margin: auto;
+.step-list li:last-child .step__con img{
+    margin-bottom: 0px;
 }
-.brand .btn-wrap .btn button{
+.convenient li {
+    margin-bottom: 60px;
+}
+.convenient li:last-child{
+    margin-bottom: 0px;
+}
+.convenient li img{
     width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
 }
-
-
-.ui-wrap{
-    background-color: #f5f5f5;
-}
-@media screen and (max-width: 1400px) { 
-    .research__doc .image-wrap div{
-        width: calc(50% - 30px);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow : 0 4px 10px #0000001a, 0 0 5px #0000000d;
-    }
-    .research__doc .image-wrap div:last-child{
-        display: none;
+@media screen and (max-width: 1268px) {
+    .easy li p span{
+        display: block;
     }
 }
-@media screen and (max-width: 768px) { 
-    .research__doc .image-wrap div{
-        width: 100%;
+@media screen and (max-width: 960px) {
+    .easy .easy__before,
+    .easy .easy__after{
+        grid-template-columns: 1fr;
     }
-    .research__doc .image-wrap div:nth-child(2){
-        display: none;
+    .easy li p span{
+        display: inline;
     }
 }
