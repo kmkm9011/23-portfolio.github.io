@@ -1,16 +1,16 @@
-
 /* ------ 공통 영역 ------ */
-
 #header{ opacity: 0;}
 #banner-main{
     background: center / cover no-repeat url(../img/nea-branding/banner-main.png);
     background-attachment: fixed;
 }
 .info__bar{width: 100%;}
+
 /* ------ 오버뷰 ------ */
 .overview-wrap{
     background: center / cover no-repeat url(../img/nea-branding/bg-overview.png);
 }
+
 /* ------ 리서치 ------ */
 .research button{margin-top: 24px;margin-right: 8px;}
 .research-bottom{
@@ -23,77 +23,6 @@
     border-radius: 8px;
 }
 
-
-
-
-/*------------------------ 이슈 / 골 ------------------------*/
-.concept-title-wrap{
-    background:url(../img/nea-branding/img-concept.png);
-    background-size: cover;
-    background-position: center center;
-}
-.concept-title-wrap .name-wrap{
-    padding-bottom: 0px;
-}
-.concept-title .pj__description span{
-    color : #ffffff;
-    font-weight : 500;
-}
-.concept__concept{
-    width: 100%;
-    margin: auto;
-    margin-top: 80px;
-
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    -ms-transition: width 1s;
-    -o-transition: width 1s;
-    transition: width 1s;
-}
-.concept__concept ul{
-    width: 100%; 
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-.concept__circle{
-    box-sizing: border-box;
-    position: relative;
-    width: 25%;
-    padding-bottom: 25%;
-    border-radius: 50%;
-    border: 1px solid #ffffff;
-
-    -webkit-transition:height 1s, padding-bottom 1s, border-radius 1s;
-    -moz-transition: height 1s, padding-bottom 1s, border-radius 1s;
-    -ms-transition: height 1s, padding-bottom 1s, border-radius 1s;
-    -o-transition: height 1s, padding-bottom 1s, border-radius 1s;
-    transition: height 1s, padding-bottom 1s, border-radius 1s;
-}
-.concept__plus{
-    position: relative;
-    width: 12.5%;
-    padding-bottom: 12.5%;
-
-    -webkit-transition: height 1s, padding-bottom 1s;
-    -moz-transition: height 1s, padding-bottom 1s;
-    -ms-transition: height 1s, padding-bottom 1s;
-    -o-transition: height 1s, padding-bottom 1s;
-    transition: height 1s, padding-bottom 1s;
-}
-.concept__concept ul li div{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-.concept__concept ul li div p{
-    width: 100%;
-    text-align: center;
-}
 /*------------------------ 개성 ------------------------*/
 .color .name-wrap{padding-bottom: 0;}
 .color .pj__description span{
@@ -633,40 +562,6 @@
     #banner-main{
         background-attachment: scroll;
     }
-   /* 컨셉 */
-
-    .concept__concept{
-        width: 80%;
-
-        -webkit-transition: width 1s;
-        -moz-transition: width 1s;
-        -ms-transition: width 1s;
-        -o-transition: width 1s;
-        transition: width 1s;
-    }
-    .concept__circle{
-        width: 100%;
-        height: 80px;
-        padding-bottom: 0;
-        border-radius: 40px;
-
-        -webkit-transition:height 1s, padding-bottom 1s, border-radius 1s;
-        -moz-transition: height 1s, padding-bottom 1s, border-radius 1s;
-        -ms-transition: height 1s, padding-bottom 1s, border-radius 1s;
-        -o-transition: height 1s, padding-bottom 1s, border-radius 1s;
-        transition: height 1s, padding-bottom 1s, border-radius 1s;
-    }
-    .concept__plus{
-        width: 100%;
-        height: 80px;
-        padding-bottom: 0;
-
-        -webkit-transition: height 1s, padding-bottom 1s;
-        -moz-transition: height 1s, padding-bottom 1s;
-        -ms-transition: height 1s, padding-bottom 1s;
-        -o-transition: height 1s, padding-bottom 1s;
-        transition: height 1s, padding-bottom 1s;
-    }
     /* 개성 */
     .color-bar{
         grid-template-columns: 1fr 1fr;
@@ -677,8 +572,8 @@
         -o-transition: grid-template-columns 1s;
         transition: grid-template-columns 1s;
     }
-    /* 통일성 */
 
+    /* 통일성 */
     .shape__concept{
         width: 80%;
 
@@ -795,7 +690,8 @@
         -o-transition: height 1s;
         transition: height 1s;
     }
-    /*목업*/
+
+    /* 목업 */
     .mockup__2col{
         grid-template-columns: 1fr ;
         
@@ -824,6 +720,7 @@
         transition: width 1s;
     }
 }
+
 @media screen and (max-width: 480px) {
     /* 개성 */
     .color-bar{
