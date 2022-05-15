@@ -1,27 +1,27 @@
 /* -----------------폰트----------------- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 
-.h1{font: 96px / 112px 'Noto Sans KR', sans-serif;}
-.h2{font: 56px / 72px 'Noto Sans KR', sans-serif;}
-.h3{font: 48px / 56px 'Noto Sans KR', sans-serif;}
-.h4{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #000000;}
-.h4-w{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #ffffff;}
-.h5{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #000000;}
-.h5-w{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #ffffff;}
-.h6{font: 500 20px / 32px 'Noto Sans KR', sans-serif; color: #000000;}
-.h6-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color: #ffffff;}
+.h1{font: 96px / 112px 'Noto Sans KR', sans-serif;word-break: keep-all;}
+.h2{font: 56px / 72px 'Noto Sans KR', sans-serif;word-break: keep-all;}
+.h3{font: 48px / 56px 'Noto Sans KR', sans-serif;word-break: keep-all;}
+.h4{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #000000;word-break: keep-all;}
+.h4-w{font: 32px / 46px 'Noto Sans KR', sans-serif;  color: #ffffff;word-break: keep-all;}
+.h5{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #000000;word-break: keep-all;}
+.h5-w{font: 500 24px / 36px 'Noto Sans KR', sans-serif; color: #ffffff;word-break: keep-all;}
+.h6{font: 500 20px / 32px 'Noto Sans KR', sans-serif; color: #000000;word-break: keep-all;}
+.h6-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color: #ffffff;word-break: keep-all;}
 
 
-.font-title{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#000000B3;}
-.font-subtitle{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#000000B3;}
-.font-body{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#0000008c;}
-.font-description{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#00000066;}
-.font-caption{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#0000008c;}
+.font-title{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#000000B3;word-break: keep-all;}
+.font-subtitle{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#000000B3;word-break: keep-all;}
+.font-body{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#0000008c;word-break: keep-all;}
+.font-description{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#00000066;word-break: keep-all;}
+.font-caption{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#0000008c;word-break: keep-all;}
 
-.font-title-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#ffffff;}
-.font-subtitle-w{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#ffffff;}
-.font-body-w{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#ffffffB3;}
-.font-description-w{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#ffffff80;} 
+.font-title-w{font: 500 20px / 32px 'Noto Sans KR', sans-serif;color:#ffffff;word-break: keep-all;}
+.font-subtitle-w{font: 16px / 24px 'Noto Sans KR', sans-serif;color:#ffffff;word-break: keep-all;}
+.font-body-w{font: 14px / 26px 'Noto Sans KR', sans-serif;color:#ffffffB3;word-break: keep-all;}
+.font-description-w{font: 12px / 22px 'Noto Sans KR', sans-serif;color:#ffffff80;word-break: keep-all;} 
 /* ---------------폰트 컬러--------------- */
 .b70{color:#000000B3;}
 .b40{color:#00000066;}
