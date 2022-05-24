@@ -166,81 +166,63 @@ header{
 .overview__title{
     padding: 32px 0 20px; 
 }
-/* 이슈 & 골 */
-.concept-title-wrap{
-    background:url(../img/nea/img-concept.png);
+
+/*------------------------ 이슈 & 골 ------------------------*/
+.goal-wrap{
     background-size: cover;
     background-position: center center;
 }
-.concept-title-wrap .name-wrap{
+.goal-wrap .name-wrap{
     padding-bottom: 0px;
 }
-.concept-title .pj__description span{
+.goal-wrap .pj__description span{
     color : #ffffff;
     font-weight : 500;
 }
-.concept__concept{
+.goal-wrap .goal{
     width: 100%;
     margin-top: 80px;
 }
-.concept__concept .concept__list{
-    margin-bottom: 40px;
+.goal-wrap .goal ul{
+    margin-bottom: 80px;
 }
-.concept__concept .concept__list:last-child{
+.goal-wrap .goal ul:last-child{
     margin-bottom: 0px;
 }
-.concept__list .concept__title{
-    margin-bottom: 16px;
+.goal-wrap .goal ul .goal__title{
+    padding-bottom : 4px;
+    border-bottom: 1px solid #ffffffB3;
 }
-.concept__list li ul{
-    width: 100%; 
-    height: auto;
+.goal-wrap .goal  ul li ul{
+    padding-top:16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px; 
+}
+.goal-wrap .goal .goal__con{
+    padding: 0;
+
+    -webkit-transition: padding 1s;
+    -moz-transition: padding 1s;
+    -ms-transition: padding 1s;
+    -o-transition: padding 1s;
+    transition: padding 1s;
+}
+.goal-wrap .goal .goal__con .h6-w{
+    font-size: 18px;
+}
+.goal-wrap .goal .goal__con .font-body-w{
+    padding-top: 4px;
+    line-height: 20px;
+}
+.goal-wrap .goal .goal__arrow{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: center; 
+    padding: 32px;
 }
-.concept__circle{
-    box-sizing: border-box;
-    position: relative;
-    width: 25%;
-    padding-bottom: 25%;
-    border-radius: 50%;
-    border: 1px solid #ffffff;
-        
-    -webkit-transition: width 1s, border-radius 1s;
-    -moz-transition:  width 1s, border-radius 1s;
-    -ms-transition:  width 1s, border-radius 1s;
-    -o-transition:  width 1s, border-radius 1s;
-    transition:  width 1s, border-radius 1s;
+.goal-wrap .goal .goal__arrow img{
+    width: 32px;
 }
-.concept__circle span{display: block;}
-.concept__circle .divider{display: none;}
-.concept__plus{
-    position: relative;
-    width: 12.5%;
-        
-    -webkit-transition: width 1s;
-    -moz-transition:  width 1s;
-    -ms-transition:  width 1s;
-    -o-transition:  width 1s;
-    transition:  width 1s;
-}
-.concept__circle div{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-.concept__circle p,
-.concept__plus p{
-    width: 100%;
-    text-align: center;
-}
-
-
 
 @media screen and (max-width: 960px) {
     .column4{grid-template-columns: 1fr;column-gap: 0;}
@@ -281,46 +263,6 @@ header{
         -o-transition: width 1s, padding-right 1s;
         transition: width 1s, padding-right 1s;
     }
-
-    /* 이슈 & 골 */
-    .concept__circle{
-        width: calc(33.33% - 27px);
-        position: relative;
-        padding-bottom: 0%;
-        border-radius: 30px;
-        
-        -webkit-transition: width 1s, border-radius 1s;
-        -moz-transition:  width 1s, border-radius 1s;
-        -ms-transition:  width 1s, border-radius 1s;
-        -o-transition:  width 1s, border-radius 1s;
-        transition:  width 1s, border-radius 1s;
-    }
-    .concept__circle span{display: inline-block;}
-    .concept__circle .divider{display: inline-block;}
-    .concept__circle div{
-        position: relative;
-        display: block;
-        flex-wrap: none;
-        align-items: none;
-
-        width: 100%;
-        height: auto;
-    }
-    .concept__plus{
-        width: 40px;
-        
-        -webkit-transition: width 1s;
-        -moz-transition:  width 1s;
-        -ms-transition:  width 1s;
-        -o-transition:  width 1s;
-        transition:  width 1s;
-    }
-    .concept__circle p,
-    .concept__plus p{
-        font-size: 16px;
-        line-height: 20px;
-        padding: 20px 0;
-    }
 }
 @media screen and (max-width: 480px) { 
     .info ul ul{
@@ -334,34 +276,23 @@ header{
         -o-transition: height 1s;
         transition: height 1s;
     } 
+    /* 이슈 & 골 */
+    .goal-wrap .goal  ul li ul{
+        grid-template-columns: 1fr;
 
-    /* 컨셉 */
-    .concept__circle{
-        width: calc(33.33% - 16px);
-        
-        -webkit-transition: width 1s, padding 1s, border-radius 1s;
-        -moz-transition:  width 1s, padding 1s, border-radius 1s;
-        -ms-transition:  width 1s, padding 1s, border-radius 1s;
-        -o-transition:  width 1s, padding 1s, border-radius 1s;
-        transition:  width 1s, padding 1s, border-radius 1s;
+        -webkit-transition: grid-template-columns 1s;
+        -moz-transition: grid-template-columns 1s;
+        -ms-transition: grid-template-columns 1s;
+        -o-transition: grid-template-columns 1s;
+        transition: grid-template-columns 1s;
     }
-    .concept__circle span{display: block;}
-    .concept__circle .divider{display: none;}
-    .concept__plus{
-        width: 24px;
-        
-        -webkit-transition: width 1s;
-        -moz-transition:  width 1s;
-        -ms-transition:  width 1s;
-        -o-transition:  width 1s;
-        transition:  width 1s;
-    }
-    .concept__circle p,
-    .concept__plus p{
-        font-size: 14px;
-        line-height: 20px;
-        padding: 20px 0;
-    }
+    .goal-wrap .goal .goal__con{
+        padding: 12px 0;
 
-    
+        -webkit-transition: padding 1s;
+        -moz-transition: padding 1s;
+        -ms-transition: padding 1s;
+        -o-transition: padding 1s;
+        transition: padding 1s;
+    }
 }

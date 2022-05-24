@@ -21,16 +21,16 @@
     <script defer src="./js/pj-general.js"></script>
     <script>
         // 새로고침&앞으로가기 시 스크롤 탑
-        // history.scrollRestoration = "manual"
-        // $('html').scrollTop(0);
+        history.scrollRestoration = "manual"
+        $('html').scrollTop(0);
         // 뒤로가기로 진입 시 새로고침
-        // window.onpageshow = function (event) {
-        //     if (event.persisted) {
-        //         location.reload();
-        //         $('html').scrollTop(0);
-        //     }
-        //     else { }
-        // };
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                location.reload();
+                $('html').scrollTop(0);
+            }
+            else { }
+        };
         $(document).ready(function(){
             // import html
             $("#menu").load("./html/menu.html"); 
@@ -63,12 +63,12 @@
     </script>
 </head>
 <body>
-    <!-- <div id="loading">
+    <div id="loading">
         <video muted autoplay loop playsinline>
             <source src="./img/loading.mp4" type="video/mp4">
             <strong>Your browser does not support the video tag.</strong>
         </video>
-    </div> -->
+    </div>
 
     <div id="menu"></div>
     <header id="header"></header>
@@ -160,35 +160,44 @@
 
 
 
-        <!------------------------ 리서치 ------------------------>
-        <div class="research-wrap container">
-            <div class="research con-inner">
+        <!------------------------ 링크 ------------------------>
+        <div class="link-wrap container">
+            <div class="link con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
                         <p class="name__num font-subtitle">03</p>
                         <div class="name__category">
-                            <p class="font-subtitle">UX & UI</p>
+                            <p class="font-subtitle">Brnading & UI</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
-                            <p>NE Anonymous에 대한 브랜딩과 UI 디자인에 관하여 자세히 보고 싶으시다면, 하단 버튼을 통해 화면을 이동해 주세요.</p>
+                            <p>UX 외 내용은 아래 이미지를 클릭하여 확인하실 수 있습니다.</p>
                         </div>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html';" >
-                            브랜딩 자세히 보기
-                        </button>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-ux.html';" >
-                            UI 자세히 보기
-                        </button>
                     </li>
                 </ul>
-                <div class="research-bottom"><img src="./img/nea-ux/img-research.png" alt="브랜딩과 UX 이미지"> </div>
+                <div class="link-bottom column2">
+                    <a class="branding" href="https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Branding</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/nea-ux/img-easy-arrow.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                    <a class="ui" href="https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-ux.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Anonymous UI</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/nea-ux/img-easy-arrow.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
         </div>
         <!------------------------ 이슈 / 골 ------------------------>
-        <div class="concept-title-wrap container">
-            <div class="concept-title con-inner">
+        <div class="goal-wrap container">
+            <div class="con-inner">
                 
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
@@ -200,76 +209,132 @@
                     <li class="column4-13">
                         <div class="pj__description font-body-w">
                             <p>
-                                기존 NexR의 솔루션은 각기 다른 컨셉을 가져, 같은 회사의 제품이라고 느껴지지 않았습니다. 하지만 이번 프로젝트는 Enterprise 형태로, 동일 계열 제품이라는 것을 표현하기 위해 <span>통일성 및 연관성</span>이 있어야 했습니다. 
-                                여기에 더해, 사용자가 자신이 어떤 제품을 이용하고 있는지 헷갈리지 않기 위해 <span>각각의 개성</span>을 가진 브랜딩을 진행해야 했습니다. 
-                                또한 NE Anonymous와 마찬가지로 신규 유저층 확보를 위해 기존 제품이 가진 어려움/전문성/무거움이라는 키워드를 <span>쉬움/친근함/가벼움</span>으로 바꾸어야 했습니다.
-                                이에 따라 <span>'개성 통일성 가벼움'</span>을 키워드로 NE 브랜딩 프로젝트를 진행했습니다.
+                                인터뷰 결과, 비식별 솔루션은 마케터 / 기획자와 같이 <span>비 개발자가 필요에 의해 사용</span>한다는 것을 알 수 있었습니다. 
+                                이들은 <span>짧은 교육을 받은 후 실무</span>에 들어가기 때문에, 막상 툴을 지급하면 큰 어려움을 느꼈습니다. 
+                                그 이유는 관련 용어들이 너무 어렵고, 익숙한 솔루션이 아니기 때문이었습니다. NEA에서는 이런 사용자들의 불편함을 여러 방향으로 해결하려 했습니다.
                             </p>
                         </div>
-                        <div class="concept__concept">
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Problem</p></li>
+                        <div class="goal">
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Issue</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>어려움</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>복잡함</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>불편함</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">어려움</p>
+                                            <p class="font-body-w">단어가 생소하고 어렵다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">복잡함</p>
+                                            <p class="font-body-w">관련 지식이 없어 무엇부터 해야할지 모르겠다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">헷갈림</p>
+                                            <p class="font-body-w">기법이 너무 많고, 설정이 무엇을 의미하는지 모르겠다.</p>
+                                        </li>
                                     </ul>              
                                 </li>
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Concept</p></li>
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Goal</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>쉽게</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>순서대로</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>편리하게</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">언어 순화</p>
+                                            <p class="font-body-w">단어를 한글로 쉽게 만들어보자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">스텝</p>
+                                            <p class="font-body-w">초보 사용자도 사용할 수 있도록 순서를 제공하자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">문장형</p>
+                                            <p class="font-body-w">기법을 카테고리화 하고, 설정을 문장형으로 제공하자.</p>
+                                        </li>
                                     </ul>              
                                 </li>                                
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Solution</p></li>
-                                <li>
-                                    <ul>
-                                        <li class="concept__circle h6-w"><div><p>언어 순화</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>스텝</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p><span>부가기능</span><span class="divider"> / </span><span>가이드</span></p></div></li>
-                                    </ul>              
-                                </li>   
-                            </ul>
+                            
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-
-         <!------------------------ 쉽게 ------------------------>
-        <div class="concept-wrap container">
-            <div class="concept con-inner">
-
-
-                <div class="easy-wrap">
-                    <ul class="name-wrap column4">
-                        <li class="name__num-wrap">
-                            <p class="name__num font-subtitle">04 -1</p>
-                            <div class="name__category">
-                                <p class="font-subtitle">쉽게</p>
-                            </div>
+        <!------------------------ 리서치 ------------------------>
+        <div class="research-wrap container">
+            <div class="con-inner">
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">04 -0</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">Research</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p>
+                                기본적인 인터뷰 진행 후 경쟁사 조사를 하려 했으나, <span>폐쇄적인 솔루션 특성상 리서치가 불가능</span>했습니다. 
+                                이에 따라  개인 정보 보호 위원회 / 금융 위원회 등 <span>국가에서 공식 배포한 문서들을 수집</span>해, 약 20개의 문서를 통하여 리서치를 진행했습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="research__doc">
+                    <p class="ux-title font-description"># 공식 문서 수집</br><span>이미지 클릭 시, 가명/익명 관련 대표 문서를 확인할 수 있습니다.</span></p>
+                    <ul>
+                        <li class="research__doc1">
+                            <a href="https://drive.google.com/file/d/1UthQisgQKWUPeo8vrJMbwhfXBMBy2Wzm/view?usp=sharing" target="_blank"></a>
                         </li>
-                        <li class="column4-13">
-                            <div class="pj__description font-body">
-                                <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
-                            </div>
+                        <li class="research__doc2">
+                            <a href="https://drive.google.com/file/d/1npjyZk3lcOLmiTBEGHTQB8IXGkbd7WgP/view?usp=sharing" target="_blank"></a>
                         </li>
+                        <li class="research__doc3">
+                            <a href="https://drive.google.com/file/d/1vWEex-E5AeHb7ajYDEIJsJZ-mhW4aCUw/view?usp=sharing" target="_blank"></a>
+                        </li>
+                        <li class="research__doc4">
+                            <a href="https://drive.google.com/file/d/1jSNNAHINfG6tLcwPkPCwFtK28jxGmyRO/view?usp=sharing" target="_blank"></a>
+                        </li>       
                     </ul>
-                    <ul class="easy">
-                        <li class="easy__before font-body">
+                </div>
+                <div class="research__report">
+                    <p class="ux-title font-description"># 문서화 및 배포</p>
+                    <ul class="report__image">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------ 언어 순화 ------------------------>
+        <div class="word-wrap container">
+            <div class="con-inner">
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">04 -1</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">언어 순화</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p>
+                                비식별 관련 단어를 어려워하는 사용자를 위해, 문서에서 자주 사용하는 <span>영문을 한글화</span>했습니다. 
+                                또한 약어 표시 및 내용이 함축되어 있는 단어를 풀어, 사용자가 쉽게 이해할 수 있도록 <span>언어를 순화</span>하는 작업을 진행했습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="word">
+                    <li class="word__before font-body">
+                        <p class="ux-title font-description">변경 전</p>
+                        <div>
                             <p>Record</p>
                             <p>Suppression</p>
                             <p>Class <span>Size</span></p>
@@ -286,11 +351,14 @@
                             <p>L</p>
                             <p>ENT</p>
                             <p>DM</p>
-                        </li>
-                        <li class="easy__arrow">
-                            <img src="./img/nea-ux/img-easy-arrow.png" alt="텍스트 조정 전에서 후로 향하는 화살표">
-                        </li>
-                        <li class="easy__after font-body">
+                        </div>
+                    </li>
+                    <li class="word__arrow">
+                        <img src="./img/nea-ux/img-word-arrow.png" alt="텍스트 조정 전에서 후로 향하는 화살표">
+                    </li>
+                    <li class="word__after font-body">
+                        <p class="ux-title font-description">변경 후</p>
+                        <div>
                             <p>행</p>
                             <p>삭제 허용 범위</p>
                             <p>동질 집합 내 <span>데이터 수</span></p>
@@ -307,207 +375,139 @@
                             <p>L-다양성</p>
                             <p>불확실성</p>
                             <p>분별력</p>
-                        </li>
-                    </ul>
-                </div>                
+                        </div>
+                    </li>
+                </ul>            
             </div>
         </div>
 
         <!------------------------ 순서대로 ------------------------>
-        <div class="concept-wrap container">
-            <div class="concept con-inner">
-
-
-                <div class="step-wrap">
-                    <ul class="name-wrap column4">
-                        <li class="name__num-wrap">
-                            <p class="name__num font-subtitle">04 -2</p>
-                            <div class="name__category">
-                                <p class="font-subtitle">순서대로</p>
+        <div class="step-wrap container">
+            <div class="con-inner">
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">04 -2</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">순서대로</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p>
+                                비식별 작업 진행 시 무엇부터 해야 할지 헷갈려 하는 사용자를 위해, 문서를 분석하여 최적화된 Step을 설정했습니다. 
+                                이를 통해 사용자는 버튼 하나만으로 작업을 시작할 수 있으며, 선택지에 따라 약 80가지의 케이스를 얻을 수 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="step-list">
+                    <p  class="ux-title font-description"># 가명 / 익명 작업 시 Flow 정리</p>
+                    <ul>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">데이터 수집</div>
+                                <div class="line"><div></div></div>
                             </div>
+                            <div class="step__con font-body">가명 / 익명 처리에 필요한 데이터를 로컬 및 외부 저장소를 통해 수집합니다.</div>
                         </li>
-                        <li class="column4-13">
-                            <div class="pj__description font-body">
-                                <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">결합키 생성</div>
+                                <div class="line"><div></div></div>
                             </div>
+                            <div class="step__con font-body">수집된 데이터에서 데이터 결합에 필요한 결합키를 선택 및 생성합니다.</div>
+                        </li>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">가명 / 익명 설정</div>
+                                <div class="line"><div></div></div>
+                            </div>
+                            <div class="step__con font-body">각 컬럼에 대해 가명 / 익명 처리를 적용합니다. 이때, 결합키에서 선택된 데이터는 가명 / 익명 처리가 불가능합니다.</div>
+                        </li>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">모델 설정</div>
+                                <div class="line"><div></div></div>
+                            </div>
+                            <div class="step__con font-body">K-익명성, L-다양성, T-근접성에 대한 제한을 설정합니다.</div>
+                        </li>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">분석 결과</div>
+                                <div class="line"><div></div></div>
+                            </div>
+                            <div class="step__con font-body">가명 익명 처리에 대해 분석하여, 정보를 수치화합니다.</div>
+                        </li>
+                        <li>
+                            <div class="step__step">
+                                <div class="title font-body">개인 정보 검출</div>
+                            </div>
+                            <div class="step__con font-body">분석 완료 데이터 / 분석 전 데이터에 개인 정보가 포함되어 있는지 점검합니다</div>
                         </li>
                     </ul>
-                    <div class="step">
-                        <ul class="step__doc">
-                            <li class="step__doc1">
-                                <a href="https://drive.google.com/file/d/1UthQisgQKWUPeo8vrJMbwhfXBMBy2Wzm/view?usp=sharing" target="_blank"></a>
-                            </li>
-                            <li class="step__doc2">
-                                <a href="https://drive.google.com/file/d/1npjyZk3lcOLmiTBEGHTQB8IXGkbd7WgP/view?usp=sharing" target="_blank"></a>
-                            </li>
-                            <li class="step__doc3">
-                                <a href="https://drive.google.com/file/d/1nNdtTCm7jl53rkOOQsnWv0JopdRu_kBs/view?usp=sharing" target="_blank"></a>
-                            </li>
-                            <li class="step__doc4">
-                                <a href="https://drive.google.com/file/d/1vWEex-E5AeHb7ajYDEIJsJZ-mhW4aCUw/view?usp=sharing" target="_blank"></a>
-                            </li>
-                            <li class="step__doc5">
-                                <a href="https://drive.google.com/file/d/1jSNNAHINfG6tLcwPkPCwFtK28jxGmyRO/view?usp=sharing" target="_blank"></a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <ul class="step-list">
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">1</p></div>
-                                    <p class="title font-body">데이터 수집</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">가명 익명 처리에 필요한 데이터를 로컬 및 외부 저장소를 통해 수집합니다.</p>  
-                                <img src="./img/nea-ux/img-step1.png" alt="데이터 수집 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">2</p></div>
-                                    <p class="title font-body">결합키 생성</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">데이터 결합에 필요한 결합키를 생성합니다.</p>  
-                                <img src="./img/nea-ux/img-step2.png" alt="결합키 생성 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">3</p></div>
-                                    <p class="title font-body">가명 / 익명 설정</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">각 컬럼에 대해 가명 / 익명 처리를 적용합니다.</p>  
-                                <img src="./img/nea-ux/img-step3.png" alt="가명 / 익명 설정 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">4</p></div>
-                                    <p class="title font-body">모델 설정</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">K-익명성, L-다양성, T-근접성에 대한 제한을 설정합니다.</p>  
-                                <img src="./img/nea-ux/img-step4.png" alt="모델 설정 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">5</p></div>
-                                    <p class="title font-body">분석 결과</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">가명 익명 처리에 대해 분석하여, 정보를 수치화합니다.</p>  
-                                <img src="./img/nea-ux/img-step5.png" alt="분석 결과 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">6</p></div>
-                                    <p class="title font-body">개인 정보 검출</p>
-                                </div>
-                                
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">선택한 컬럼에 개인 정보가 포함되어 있는지 점검합니다.</p>  
-                                <img src="./img/nea-ux/img-step6.png" alt="개인 정보 검출 화면">
-                            </div>
-                        </li>
-                    </ul>
-                </div>                
+                </div>
+                <div class="step-flow">
+                    <p class="ux-title font-description"># 시나리오 점검</p>
+                    <img src="./img/nea-ux/img-step-flow.png"  alt="스텝 화면 시나리오 점검 화면">
+                </div> 
             </div>
         </div>
 
-        <!------------------------ 편리하게 ------------------------>
-        <div class="concept-wrap container">
+        <!------------------------ 익숙하게 ------------------------>
+        <div class="familiar-wrap container">
             <div class="concept con-inner">
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">04 -3</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">문장형</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p>
+                                사용자는 <span>기법이 너무 다양하고, 설정 항목이 많아</span> 비식별 설정을 어려워했습니다. 
+                                이를 해결하기 위해 기법을 <span>카테고리화</span>하여 구조를 잡고, <span>설정을 문장형으로 제공</span>하여 쉽게 이해할 수 있도록 유도했습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="familiar-img">
+                    <img src="./img/nea-ux/img-familiar1.png" alt="대시보드 화면">
+                    <img src="./img/nea-ux/img-familiar2.png" alt="대시보드 화면">
+                </div>            
+            </div>
+        </div>
 
-
-                <div class="convenient-wrap">
-                    <ul class="name-wrap column4">
-                        <li class="name__num-wrap">
-                            <p class="name__num font-subtitle">04 -3</p>
-                            <div class="name__category">
-                                <p class="font-subtitle">편리하게</p>
-                            </div>
-                        </li>
-                        <li class="column4-13">
-                            <div class="pj__description font-body">
-                                <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="step-list">
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">1</p></div>
-                                    <p class="title font-body">대시보드</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">가명 익명 작업에 관련된 데이터를 시각화하여 사용자가 쉽게 데이터를 파악할 수 있도록 합니다.</p>  
-                                <img src="./img/nea-ux/img-convenien1.png" alt="대시보드 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">2</p></div>
-                                    <p class="title font-body">저장소 관리</p>
-                                </div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">로컬뿐만 아니라 외부 저장소를 연결/관리하여 편리하게 데이터를 관리할 수 있도록 합니다.</p>  
-                                <img src="./img/nea-ux/img-convenien2.png" alt="저장소 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">3</p></div>
-                                    <p class="title font-body">최초 진입</p>
-                                </div>
-                                <div class="line"><div></div></div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">모든 화면 최초 진입 시, 매뉴얼을 읽지 않는 사용자를 위해 가이드를 제공합니다.</p> 
-                                <img src="./img/nea-ux/img-convenien3.png" alt="가명 / 익명 작업 리스트 화면">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step__step">
-                                <div class="title-wrap">
-                                    <div class="num"><p class="font-body-w">4</p></div>
-                                    <p class="title font-body">에어 / 진입 불가</p>
-                                </div>
-                            </div>
-                            <div class="step__con">
-                                <p class="description font-body">모든 에러 상황 / 진입 불가능한 상황에 대하여 이유와 다음 행동에 대한 가이드를 제공합니다.</p>  
-                                <img src="./img/nea-ux/img-convenien4.png" alt="모델 설정 화면">
-                            </div>
-                        </li>
-                    </ul>
-                </div>                
+        <!------------------------ UX ------------------------>
+        <div class="ux-wrap container">
+            <div class="concept con-inner">
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">05</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">규격서 작성</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p>
+                                위의 컨셉을 반영하여 약 200장 분량의 규격서를 작성했습니다.
+                                그 결과 NE Anonymous는 NE Enterprise 서비스 중 <span>가장 먼저 출시</span>되었지만, <span>가장 좋은 평가를 받는</span> 서비스가 되었습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ux-ai">
+                    <p class="ux-title font-description"># Information Architecture 1.0ver</p>
+                    <img src="./img/nea-ux/img-ux-ia.jpg"  alt="IA 화면">
+                </div>    
+                <div class="ux-screen">
+                    <p class="ux-title font-description"># 화면 구성 및 규격서 작성</p>
+                </div>        
+            </div>
+            <div class="ux-screen-image">
+                <img class="con-inner" src="./img/nea-ux/img-ux-screen.png"  alt="ux 규격서 화면">
             </div>
         </div>
 
