@@ -303,6 +303,9 @@
 }
 
 @media screen and (max-width: 960px) {
+    #banner-main{
+        background-attachment: scroll;
+    }
     /* ------ 링크 ------ */
     .link-bottom a{
         margin-bottom: 80px;
