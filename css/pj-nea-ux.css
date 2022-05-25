@@ -11,6 +11,9 @@
 .ux-title{
     font-weight: 600;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .ux-title span{
     font-weight: 400;
