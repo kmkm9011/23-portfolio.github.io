@@ -21,16 +21,16 @@
     <script defer src="./js/pj-general.js"></script>
     <script>
         // 새로고침&앞으로가기 시 스크롤 탑
-        history.scrollRestoration = "manual"
-        $('html').scrollTop(0);
+        // history.scrollRestoration = "manual"
+        // $('html').scrollTop(0);
         // 뒤로가기로 진입 시 새로고침
-        window.onpageshow = function (event) {
-            if (event.persisted) {
-                location.reload();
-                $('html').scrollTop(0);
-            }
-            else { }
-        };
+        // window.onpageshow = function (event) {
+        //     if (event.persisted) {
+        //         location.reload();
+        //         $('html').scrollTop(0);
+        //     }
+        //     else { }
+        // };
         $(document).ready(function(){
             // import html
             $("#menu").load("./html/menu.html"); 
@@ -49,7 +49,8 @@
                 $("#info__percent").text("100%");
                 $("#info__illustrator").hide();
                 $("#info__after").hide();
-                $("#info__figma").hide();
+                $("#info__sketch").hide();
+                $("#info__zepplin").hide();
                 $("#info__ppt").hide();
             });    
             $("#footer").load("./html/footer.html"); 
@@ -65,12 +66,12 @@
     </script>
 </head>
 <body>
-    <div id="loading">
+    <!-- <div id="loading">
         <video muted autoplay loop playsinline>
             <source src="./img/loading.mp4" type="video/mp4">
             <strong>Your browser does not support the video tag.</strong>
         </video>
-    </div>
+    </div> -->
     
     <div id="menu"></div>
     <header id="header"></header>
@@ -164,39 +165,46 @@
         </div>
 
 
-
-        <!------------------------ 리서치 ------------------------>
-        <div class="research-wrap container">
-            <div class="research con-inner">
+        <!------------------------ 링크 ------------------------>
+        <div class="link-wrap container">
+            <div class="link con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
                         <p class="name__num font-subtitle">03</p>
                         <div class="name__category">
-                            <p class="font-subtitle">Branding & UI</p>
+                            <p class="font-subtitle">Brnading & UI</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
-                            <p>브랜딩과 UX에 관하여 자세히 보고 싶으시다면, 하단 버튼을 통해 화면을 이동해 주세요.</p>
+                            <p>UX 외 내용은 아래 이미지를 클릭하여 확인하실 수 있습니다.</p>
                         </div>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html';" >
-                            브랜딩 자세히 보기
-                        </button>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io/pj-nea-ux.html';" >
-                            UX 자세히 보기
-                        </button>
                     </li>
                 </ul>
-                <div class="research-bottom"><img src="./img/nea/img-research.png" alt="브랜딩과 UX 이미지"> </div>
+                <div class="link-bottom column2">
+                    <a class="ux" href="https://kmkm9011.github.io/23-portfolio.github.io/pj-nea-ux.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Anonymous UX</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/arrow-right-b.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                    <a class="branding" href="https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Branding</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/arrow-right-b.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
         </div>
+        
        
-
-
         <!------------------------ 이슈 / 골 ------------------------>
-        <div class="concept-title-wrap container">
-            <div class="concept-title con-inner">
+        <div class="goal-wrap container">
+            <div class="con-inner">
                 
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
@@ -213,49 +221,53 @@
                                 위와 같이 <span>'어디든 부드럽게 가볍게'</span> 세 가지 키워드를 가지고 NE Anonymous의 아이덴티티를 형성하고자 하였습니다.
                             </p>
                         </div>
-                        <div class="concept__concept">
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Problem</p></li>
+                        <div class="goal">
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Issue</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>여러 서비스</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>딱딱한</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>무거운</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">여러 서비스</p>
+                                            <p class="font-body-w">여러 솔루션 및 서비스에 적용할 수 있는 UI가 필요하다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">딱딱한</p>
+                                            <p class="font-body-w">전문성이 강조되어 딱딱한 이미지가 있다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">무거운</p>
+                                            <p class="font-body-w">전문가가 다루는 데이터 솔루션이기 때문에 무겁다는 인식이 있다.</p>
+                                        </li>
                                     </ul>              
                                 </li>
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Concept</p></li>
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Goal</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>어디든</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>부드럽게</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>가볍게</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">어디든</p>
+                                            <p class="font-body-w">디자인 시스템을 사용하여 어떤 서비스든 적용할 수 있도록 하자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">부드럽게</p>
+                                            <p class="font-body-w">곡선과 그라데이션을 이용하여 부드러운 느낌을 주자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">가볍게</p>
+                                            <p class="font-body-w">가벼운 느낌을 줄 수 있는 일러스트를 활용하자.</p>
+                                        </li>
                                     </ul>              
                                 </li>                                
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Solution</p></li>
-                                <li>
-                                    <ul>
-                                        <li class="concept__circle h6-w"><div><p><span>디자인 </span><span>시스템</span></p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p><span>곡선</span><span class="divider"> / </span><span> 그라데이션</span></p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>일러스트</p></div></li>
-                                    </ul>              
-                                </li>   
-                            </ul>
+                            
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
 
+        
 
 
 
@@ -346,7 +358,7 @@
                         <div class="pj__description font-body">
                             <p>
                                 하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 스케치 & 제플린</span>으로 전환했습니다.</br></br>
+                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
                                 그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
                                 서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
                             </p>
