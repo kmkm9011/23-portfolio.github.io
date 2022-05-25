@@ -15,7 +15,7 @@ $(document).ready(function(){
 function projectOpen(){
     $("header").stop().animate({ opacity : "1", height : "160px"}, 500);
     $("footer").stop().animate({ opacity : "1", top : "0px"}, 500);     
-    $(".contents").animate({ opacity : "1", top : "0px"}, 500);
+    $(".contents").stop().animate({ opacity : "1", top : "0px"}, 500);
 }
 
 
@@ -48,7 +48,7 @@ function projectLink(){
 function projectAction(){
     $("header").stop().animate({ opacity : "0", height : "0px"}, 500);
     $("footer").stop().animate({ opacity : "0", top : "210px"}, 500);     
-    $(".contents").animate({ opacity : "0", top : "210px"}, 500);
+    $(".contents").stop().animate({ opacity : "0", top : "210px"}, 500);
 }
 
 
