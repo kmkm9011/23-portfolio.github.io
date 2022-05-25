@@ -11,18 +11,52 @@
     background: center / cover no-repeat url(../img/nea-branding/bg-overview.png);
 }
 
-/* ------ 리서치 ------ */
-.research button{margin-top: 24px;margin-right: 8px;}
-.research-bottom{
+/* ------ 링크 ------ */
+.link-bottom .ux .image,
+.link-bottom .ui .image{
     width: 100%;
-    height: auto;
-}
-.research-bottom img{
-    width: 100%;
-    height: auto;
+    padding-bottom: 80%;
     border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
+.link-bottom .ux .image{
+    background-image: url("../img/pj-nea-ux.png");
+}
+.link-bottom .ui .image{
+    background-image: url("../img/pj-nea.png");
+}
+.link-bottom .title{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-bottom .title p{
+    display: inline-block;
+}
+.link-bottom .title .title__title{
+    font-weight: 500;
+    color:#000000B3;
+}
+.link-bottom .title .title__link{
+    display: flex;
+    align-items: center;
+}
+.link-bottom .title .title__link span{
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+}
+.link-bottom .title .title__link span img{
+    width: 100%;
+    height: 100%;
+}
+/*------------------------ 이슈 & 골 ------------------------*/
+.goal-wrap{
+    background:url(../img/nea/img-concept.png);
+}
 /*------------------------ 개성 ------------------------*/
 .color .name-wrap{padding-bottom: 0;}
 .color .pj__description span{
@@ -561,6 +595,26 @@
 @media screen and (max-width: 960px) { 
     #banner-main{
         background-attachment: scroll;
+    }
+    /* ------ 링크 ------ */
+    .link-bottom a{
+        margin-bottom: 80px;
+
+        -webkit-transition: margin-bottom 1s;
+        -moz-transition: margin-bottom 1s;
+        -ms-transition: margin-bottom 1s;
+        -o-transition: margin-bottom 1s;
+        transition: margin-bottom 1s;
+    }
+    .link-bottom .ux .image, 
+    .link-bottom .ui .image {
+        padding-bottom: 60%;
+
+        -webkit-transition: padding-bottom 1s;
+        -moz-transition: padding-bottom 1s;
+        -ms-transition: padding-bottom 1s;
+        -o-transition: padding-bottom 1s;
+        transition: padding-bottom 1s;
     }
     /* 개성 */
     .color-bar{

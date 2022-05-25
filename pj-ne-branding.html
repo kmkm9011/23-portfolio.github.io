@@ -47,7 +47,7 @@
                 $("#info__position").text("브랜딩 디자인");
                 $("#info__percent").text("100%");
                 $("#info__after").hide();
-                $("#info__scktch").hide();
+                $("#info__sketch").hide();
                 $("#info__zepplin").hide();
                 $("#info__figma").hide();
                 $("#info__ppt").hide();
@@ -158,11 +158,9 @@
             </div>
         </div>
 
-
-
-        <!------------------------ 리서치 ------------------------>
-        <div class="research-wrap container">
-            <div class="research con-inner">
+        <!------------------------ 링크 ------------------------>
+        <div class="link-wrap container">
+            <div class="link con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
                         <p class="name__num font-subtitle">03</p>
@@ -172,23 +170,34 @@
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
-                            <p>NE Anonymous에 대한 UX와 UI 디자인에 관하여 자세히 보고 싶으시다면, 하단 버튼을 통해 화면을 이동해 주세요.</p>
+                            <p>Brnading 외 내용은 아래 이미지를 클릭하여 확인하실 수 있습니다.</p>
                         </div>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io/pj-nea-ux.html';" >
-                            UX 자세히 보기
-                        </button>
-                        <button class="small--outlined" type="button" onclick="location.href='https://kmkm9011.github.io/23-portfolio.github.io/pj-nea.html';" >
-                            UI 자세히 보기
-                        </button>
                     </li>
                 </ul>
-                <div class="research-bottom"><img src="./img/nea-branding/img-research.png" alt="브랜딩과 UX 이미지"> </div>
+                <div class="link-bottom column2">
+                    <a class="ux" href="https://kmkm9011.github.io/23-portfolio.github.io/pj-nea-ux.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Anonymous UX</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/arrow-right-b.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                    <a class="ui" href="https://kmkm9011.github.io/23-portfolio.github.io/pj-nea.html"> 
+                        <div class="image"></div>
+                        <div class="title">
+                            <p class="title__title font-body">NE Anonymous UI</p>
+                            <p class="title__link font-body">이동하기 <span><img src="./img/arrow-right-b.png" alt="우측으로 향하는 화살표"></span></p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
         </div>
+        
+       
         <!------------------------ 이슈 / 골 ------------------------>
-        <div class="concept-title-wrap container">
-            <div class="concept-title con-inner">
+        <div class="goal-wrap container">
+            <div class="con-inner">
                 
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
@@ -206,49 +215,52 @@
                                 이에 따라 <span>'개성 통일성 가벼움'</span>을 키워드로 NE 브랜딩 프로젝트를 진행했습니다.
                             </p>
                         </div>
-
-                        <div class="concept__concept">
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Problem</p></li>
+                        <div class="goal">
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Issue</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>서비스의 구분</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>Enterprise</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>어려움</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">서비스의 구분</p>
+                                            <p class="font-body-w">사용자는 많은 서비스를 구분할 수 있어야 한다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">Enterprise</p>
+                                            <p class="font-body-w">Enterprise 제품이기 때문에 동일 계열 제품이라는 것을 표현해야 한다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">어려움</p>
+                                            <p class="font-body-w">전문가가 다루는 데이터 솔루션 / 서비스이기 때문에 사용자가 거부감을 느낀다.</p>
+                                        </li>
                                     </ul>              
                                 </li>
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Concept</p></li>
+                            <ul>
+                                <li class="goal__title"><p class="font-body-w">Goal</p></li>
                                 <li>
                                     <ul>
-                                        <li class="concept__circle h6-w"><div><p>개성</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>통일성</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>친근함</p></div></li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">개성</p>
+                                            <p class="font-body-w">고유 컬러를 사용하여 개성을 표현하자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">통일성</p>
+                                            <p class="font-body-w">형태 규칙을 사용하여 통일성을 표현하자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6-w">친근함</p>
+                                            <p class="font-body-w">곡선과 물결 모양을 활용하여 친근하게 다가가자.</p>
+                                        </li>
                                     </ul>              
                                 </li>                                
                             </ul>
-                            <ul class="concept__list">
-                                <li class="concept__title"><p class="font-body-w">Solution</p></li>
-                                <li>
-                                    <ul>
-                                        <li class="concept__circle h6-w"><div><p>고유 컬러</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>형태 규칙</p></div></li>
-                                        <li class="concept__plus h5-w"><p>+</p></li>
-                                        <li class="concept__circle h6-w"><div><p>곡선 물결</p></div></li>
-                                    </ul>              
-                                </li>   
-                            </ul>
+                            
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+
         
         <!------------------------ 개성 ------------------------>
         <div class="color-wrap container">
