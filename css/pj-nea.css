@@ -336,7 +336,7 @@
         transition: margin-bottom 1s;
     }
     .link-bottom .branding .image, 
-    .link-bottom .ui .image {
+    .link-bottom .ux .image {
         padding-bottom: 60%;
 
         -webkit-transition: padding-bottom 1s;
