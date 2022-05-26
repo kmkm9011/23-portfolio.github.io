@@ -56,6 +56,9 @@
 /*------------------------ 이슈 & 골 ------------------------*/
 .goal-wrap{
     background:url(../img/nea-branding/img-concept.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
 }
 /*------------------------ 개성 ------------------------*/
 .color .name-wrap{padding-bottom: 0;}

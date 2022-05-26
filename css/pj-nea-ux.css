@@ -67,6 +67,9 @@
 /*------------------------ 이슈 & 골 ------------------------*/
 .goal-wrap{
     background:url(../img/nea-ux/img-concept.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
 }
 /*------------------------ 리서치 ------------------------*/
 .research-wrap .name-wrap .pj__description span{

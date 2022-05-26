@@ -168,10 +168,7 @@ header{
 }
 
 /*------------------------ 이슈 & 골 ------------------------*/
-.goal-wrap{
-    background-size: cover;
-    background-position: center center;
-}
+
 .goal-wrap .name-wrap{
     padding-bottom: 0px;
 }
