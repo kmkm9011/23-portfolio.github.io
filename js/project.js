@@ -44,6 +44,12 @@ function projectLink(){
             location.href = "https://kmkm9011.github.io/23-portfolio.github.io//pj-ne-branding.html";
         },500);
     });
+    $(".iot").on("click" , function(){
+        projectAction();
+        setTimeout(function() { 
+            location.href = "https://kmkm9011.github.io/23-portfolio.github.io//pj-iot.html";
+        },500);
+    });
 }
 function projectAction(){
     $("header").stop().animate({ opacity : "0", height : "0px"}, 500);

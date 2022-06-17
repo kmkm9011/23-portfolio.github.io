@@ -1,0 +1,399 @@
+
+/* ------ 공통 영역 ------ */
+#header{ opacity: 0;}
+#banner-main{
+    background: center / cover no-repeat url(../img/iot/banner-main.png);
+    background-attachment: fixed;
+}
+.info__bar{width: 80%;}
+
+/* ------ 오버뷰 ------ */
+.overview-wrap{
+    background: center / cover no-repeat url(../img/nea/bg-overview.png);
+}
+.overview-wrap .name-wrap {
+    padding-bottom: 0px;
+}
+.overview-wrap .overview__flow-wrap{
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+}
+
+/*------------------------ 폰트 / 컬러 ------------------------*/
+.font{margin-bottom: 80px;}
+.font:last-child{margin-bottom: 0px;}
+.font__image img{
+    width: 100%;
+    height: auto;
+}
+.font__info{
+    margin-top: 0;
+
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -ms-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
+}
+.font__info p{margin-bottom: 40px;}
+.font__info p span:first-child{
+    display: inline-block;
+    width: 100px;
+}
+.font__info ul li{margin-top: 4px;}
+.font__info ul li span:first-child{
+    display: inline-block;
+    width: 100px;
+}
+.font__info .bold{font-weight: 700;}
+.font__info .medium{font-weight: 500;}
+.font__info .regualr{font-weight: 400;}
+.font__info .light{font-weight: 300;}
+.color-wrap{
+    padding-top: 160px;
+}
+.color-wrap .name-wrap span{
+    color : #000000;
+    font-weight : 500;
+}
+.color{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:60px;
+    row-gap: 30px;
+}
+.color li {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.color .font-subtitle-w,
+.color .font-subtitle{
+    padding: 16px 32px 0 32px;
+}
+.color .font-body-w,
+.color .font-body{
+    padding: 0px 32px 16px 32px;
+}
+.color__primary{background: #6e3186;}
+.color__sub{background: #e96569;}
+.color__black{background: #3e3d3c;}
+.color__gray{background: #dddddb;}
+/*------------------------ 메인 ------------------------*/
+.main-wrap{
+    background-image: url("../img/iot/banner-start.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.main-wrap .main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+}
+.main-wrap .main__left{
+    width: 30%;
+    padding-top: 30%;
+}
+.main-wrap  .name__num-wrap {
+    padding-bottom: 12px;
+}
+
+/* .main-wrap .main-left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: red;
+}
+
+.main-wrap .main-right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: orange;
+}
+.main-wrap .main-left .left__contents,
+.main-wrap .main-right .right__contents{
+    width: 700px;
+}
+.main-wrap .main-left .left__contents{
+    background-color: #ffffff;
+}
+.main-wrap .main-right .right__contents{
+    background-color: #6e3186;
+    padding:80px;
+}
+.main-wrap .main-left .left__contents img,
+.main-wrap .main-right .right__contents img{
+    width: calc(100% - 80px);
+    max-width: 300px;
+} */
+/*------------------------ 아이콘 & 그래픽 ------------------------*/
+/* 공통 */
+.icon-list, 
+.graphic-list,
+.animation-list {margin-bottom: 80px;}
+.icon-list:last-child,
+.graphic-list:last-child,
+.animation-list:last-child{margin-bottom: 0px;}
+.icon-list p, 
+.graphic p,
+.animation p{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.icon-list ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, auto));
+    column-gap:60px;
+    row-gap: 20px;
+}
+.graphic ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    column-gap:40px;
+    row-gap: 20px;
+}
+.animation ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    column-gap:40px;
+    row-gap: 20px;
+}
+.icon-list ul img,
+.graphic ul img,
+.animation ul img{
+    width: 100%;
+    height: auto;
+}
+/* 아이콘  */
+.icon-wrap{
+    background-image: url("../img/iot/bg-icon.png");
+    /* background-image: url("../img/iot/bg-icon.png"),
+    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.icon-wrap .con-inner:first-child{
+    padding: 160px 0 0 0;
+}
+.icon-screen{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:40px;
+}
+.icon-screen li:first-child{
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: space-between;
+}
+.icon-screen li img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-sizing: border-box;
+    box-shadow: 
+    5px 20px 20px #0000001a,
+    10px 40px 25px #00000026;
+}
+/* 그래픽  */
+.graphic-wrap{
+    background-image: url("../img/iot/bg-graphic.png");
+    /* background-image: url("../img/iot/bg-icon.png"),
+    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.graphic-wrap .con-inner:first-child{
+    padding: 160px 0 0 0;
+}
+.graphic-screen{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:40px;
+}
+.graphic-screen li:first-child{
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: space-between;
+}
+.graphic-screen li img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-sizing: border-box;
+    box-shadow: 
+    5px 20px 20px #0000001a,
+    10px 40px 25px #00000026;
+}
+/* 애니메이션  */
+.animation-wrap{
+    background-image: url("../img/iot/bg-animation.png");
+    /* background-image: url("../img/iot/bg-icon.png"),
+    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.animation-wrap .con-inner:first-child{
+    padding: 160px 0 0 0;
+}
+.animation-screen{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:40px;
+}
+.animation-screen li:first-child{
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: space-between;
+}
+.animation-screen li img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-sizing: border-box;
+    box-shadow: 
+    5px 20px 20px #0000001a,
+    10px 40px 25px #00000026;
+}
+/*------------------------ 화면 ------------------------*/
+.screen-title-wrap{
+    background-image: url("../img/iot/banner-screen.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.screen-title-wrap .screen-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.screen-title-wrap .screen-title__left{
+    width: 30%;
+    padding-top: 30%;
+}
+.screen-title-wrap  .name__num-wrap {
+    padding-bottom: 12px;
+}
+/*------------------------ 웰컴 ------------------------*/
+
+.welcome-wrap .name__num-wrap {
+    padding-bottom: 12px;
+}
+.welcome{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:40px;
+}
+.welcome > li:first-child{
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: space-between;
+}
+.welcome > li:nth-child(2){padding-top: 50%;}
+.welcome > li:nth-child(3){padding-top: 100%;}
+.welcome > li img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-sizing: border-box;
+    box-shadow: 
+    5px 20px 20px #0000001a,
+    10px 40px 25px #00000026;
+}
+.welcome > li img{
+    margin-bottom: 40px;
+}
+.welcome > li img:last-child{
+    margin-bottom: 0px;
+}
+
+/*------------------------ 등록 ------------------------*/
+.install-wrap{background-color: #f5f5f5;}
+.install-wrap .con-inner {
+    padding: 160px 0 0 0;
+}
+.install-wrap > img{
+    width: 100%;
+    height: auto;
+}
+/*------------------------ 상세 ------------------------*/
+.detail > img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+/*------------------------ 에너지 ------------------------*/
+.energy-wrap{background-color: #e9e9e9;}
+.energy-wrap .con-inner {
+    padding: 160px 0 0 0;
+}
+.energy-wrap .name-wrap {
+    padding-bottom: 0px;
+}
+.energy-wrap > img{
+    width: 100%;
+    height: auto;
+}
+/*------------------------ CF ------------------------*/
+.cf-wrap .con-inner {
+    padding: 160px 0 0 0;
+}
+.cf-wrap img{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+}
+/* @media screen and (max-width: 1920px) { 
+    .main-wrap .main-left .left__contents,
+    .main-wrap .main-right .right__contents{
+        width: calc(100% - 240px);
+    }
+}
+@media screen and (max-width: 1400px) { 
+    .main-wrap .main-left .left__contents,
+    .main-wrap .main-right .right__contents{
+        width: calc(100% - 160px);
+    }
+} */
+@media screen and (max-width: 960px) { 
+    #banner-main{
+        background-attachment: scroll;
+    }
+    /* 폰트 & 컬러 */
+    .font__info{
+        margin-top: 60px;
+
+        -webkit-transition: margin-top 1s;
+        -moz-transition: margin-top 1s;
+        -ms-transition: margin-top 1s;
+        -o-transition: margin-top 1s;
+        transition: margin-top 1s;
+    }
+    .color{ grid-template-columns: 1fr 1fr;}   
+    /* 메인 */
+    .main-wrap .main__left{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px) { 
+    /* 메인 */
+    .main-wrap{
+        background-position: 40% bottom;
+    }
+    .main-wrap .main__left{
+        width: 80%;
+    }
+} 
+
+
+
+
+
+
+
+

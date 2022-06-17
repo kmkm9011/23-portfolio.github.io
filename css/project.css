@@ -84,6 +84,9 @@ header{
 .ne-branding{
     background: center / cover no-repeat url(../img/pj-ne-branding.png);
 }
+.iot{
+    background: center / cover no-repeat url(../img/pj-iot.png);
+}
 
 
 
