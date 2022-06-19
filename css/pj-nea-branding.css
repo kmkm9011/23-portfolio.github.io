@@ -68,10 +68,7 @@
 }
 .color-bar{
     margin-top: 80px;
-    display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 30px;
+    row-gap: 20px;
     
     -webkit-transition: grid-template-columns 1s;
     -moz-transition: grid-template-columns 1s;
@@ -232,9 +229,6 @@
     transition: row-gap 1s;
 }
 .logo-contents .logo-example{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
 
     -webkit-transition: column-gap 1s;
     -moz-transition: column-gap 1s;
@@ -622,6 +616,7 @@
     /* 개성 */
     .color-bar{
         grid-template-columns: 1fr 1fr;
+        column-gap: 4.2%;
         
         -webkit-transition: grid-template-columns 1s;
         -moz-transition: grid-template-columns 1s;
@@ -683,6 +678,16 @@
         -ms-transition: row-gap 1s;
         -o-transition: row-gap 1s;
         transition: row-gap 1s;
+    }
+    .logo-contents .logo-example{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4.2%;
+    
+        -webkit-transition: column-gap 1s;
+        -moz-transition: column-gap 1s;
+        -ms-transition: column-gap 1s;
+        -o-transition: column-gap 1s;
+        transition: column-gap 1s;
     }
     .logo-element ul{
         grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
@@ -782,6 +787,7 @@
     /* 개성 */
     .color-bar{
         grid-template-columns: 1fr;
+        column-gap: 4.2%;
         
         -webkit-transition: grid-template-columns 1s;
         -moz-transition: grid-template-columns 1s;
@@ -817,15 +823,6 @@
         -ms-transition: grid-template-columns 1s;
         -o-transition: grid-template-columns 1s;
         transition: grid-template-columns 1s;
-    }
-    .logo-contents .logo-example{
-        column-gap: 40px;
-    
-        -webkit-transition: column-gap 1s;
-        -moz-transition: column-gap 1s;
-        -ms-transition: column-gap 1s;
-        -o-transition: column-gap 1s;
-        transition: column-gap 1s;
     }
     .logo-element .result{ 
         display: none;

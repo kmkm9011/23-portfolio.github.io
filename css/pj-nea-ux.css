@@ -76,17 +76,6 @@
     color: #000000;
     font-weight: 500;
 }
-.research-wrap .research__doc ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
-
-    -webkit-transition: grid-template-columns 1s, column-gap 1s;
-    -moz-transition: grid-template-columns 1s, column-gap 1s;
-    -ms-transition: grid-template-columns 1s, column-gap 1s;
-    -o-transition: grid-template-columns 1s, column-gap 1s;
-    transition: grid-template-columns 1s, column-gap 1s;
-}
 .research-wrap .research__doc ul li{
     cursor: pointer;
     margin-bottom: 0;
@@ -118,10 +107,7 @@
     margin-top: 80px;
 }
 .research__report .report__image{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 40px;
     
     -webkit-transition: grid-template-columns 1s;
     -moz-transition: grid-template-columns 1s;
@@ -216,11 +202,7 @@
 }
 
 /*------------------------ 순서대로 ------------------------*/
-.step-list > ul > li{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:60px
-}
+
 .step-list .step__step{
     width: 100%;
 }
@@ -332,6 +314,27 @@
         -o-transition: padding-bottom 1s;
         transition: padding-bottom 1s;
     }
+    /* 리서치 */
+    .research__doc > ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4.2%;
+    
+        -webkit-transition: grid-template-columns 1s;
+        -moz-transition: grid-template-columns 1s;
+        -ms-transition: grid-template-columns 1s;
+        -o-transition: grid-template-columns 1s;
+        transition: grid-template-columns 1s;
+    }
+    .research__report > ul{
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 4.2%;
+    
+        -webkit-transition: grid-template-columns 1s;
+        -moz-transition: grid-template-columns 1s;
+        -ms-transition: grid-template-columns 1s;
+        -o-transition: grid-template-columns 1s;
+        transition: grid-template-columns 1s;
+    }
     /* 언어 순화 */
     .word .word__before div,
     .word .word__after div{
@@ -345,7 +348,8 @@
     }
     /* 순서대로 */
     .step-list > ul > li{
-        column-gap:20px
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4.2%;
     }
     .step-list .step__step .line{
         display: none;

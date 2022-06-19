@@ -132,19 +132,19 @@
 .icon-list ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, auto));
-    column-gap:60px;
+    column-gap:4.7%;
     row-gap: 20px;
 }
 .graphic ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, auto));
-    column-gap:40px;
+    column-gap:4.7%;
     row-gap: 20px;
 }
 .animation ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, auto));
-    column-gap:40px;
+    column-gap:4.7%;
     row-gap: 20px;
 }
 .icon-list ul img,
@@ -168,7 +168,7 @@
 .icon-screen{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:40px;
+    column-gap:4.2%;
 }
 .icon-screen li:first-child{
     display: flex;
@@ -199,7 +199,7 @@
 .graphic-screen{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:40px;
+    column-gap:4.2%;
 }
 .graphic-screen li:first-child{
     display: flex;
@@ -230,7 +230,7 @@
 .animation-screen{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:40px;
+    column-gap:4.2%;
 }
 .animation-screen li:first-child{
     display: flex;
@@ -273,7 +273,7 @@
 .welcome{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:40px;
+    column-gap:4.2%;
 }
 .welcome > li:first-child{
     display: flex;

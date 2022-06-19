@@ -96,9 +96,6 @@
     font-weight : 500;
 }
 .color{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:60px;
     row-gap: 30px;
 }
 .color li {
@@ -133,12 +130,6 @@
 .system .name-wrap p span{
     color: #000000;
     font-weight: 500;
-}
-.system__list-wrap{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap:3%;
 }
 .system__list{width: 100%;}
 .system__list li{
@@ -359,10 +350,15 @@
         -o-transition: margin-top 1s;
         transition: margin-top 1s;
     }
-    .color{ grid-template-columns: 1fr 1fr;}   
+    .color{ 
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4.2%;}   
 
     /* 어디든 */
-    .system__list-wrap{grid-template-columns: 1fr 1fr;}
+    .system__list-wrap{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4.2%;
+    }
     .system__list-wrap > li:last-child{display: none;}
 
     /* 가볍게 */
@@ -398,9 +394,8 @@
     /* 스크린 */
    .screen-title-wrap{
         background:
-        linear-gradient(#ffffff 20%, #ffffff00 20.1%),
         url(../img/nea/texure-noise.png),
-        linear-gradient(#ffffff 0%, #ffffff 10%,#5c44a9 10.1%, #5c44a9 40%, #3354aa 80%);
+        linear-gradient(#5c44a9 0%, #5c44a9 20%, #3354aa 80%);
     }
     .screen__screen-full{
         width: 100%;
