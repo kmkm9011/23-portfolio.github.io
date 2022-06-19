@@ -19,62 +19,48 @@
 }
 
 /*------------------------ 폰트 / 컬러 ------------------------*/
-.font{margin-bottom: 80px;}
-.font:last-child{margin-bottom: 0px;}
-.font__image img{
+.font-wrap .name-wrap {
+    padding-bottom: 0px;
+}
+.font{
+    margin-top:60px;
+}
+.font div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.font div p:first-child{
+    width: 100px;
+    font-weight: 500;
+}
+.font img{
     width: 100%;
     height: auto;
 }
-.font__info{
-    margin-top: 0;
-
-    -webkit-transition: margin-top 1s;
-    -moz-transition: margin-top 1s;
-    -ms-transition: margin-top 1s;
-    -o-transition: margin-top 1s;
-    transition: margin-top 1s;
-}
-.font__info p{margin-bottom: 40px;}
-.font__info p span:first-child{
-    display: inline-block;
-    width: 100px;
-}
-.font__info ul li{margin-top: 4px;}
-.font__info ul li span:first-child{
-    display: inline-block;
-    width: 100px;
-}
-.font__info .bold{font-weight: 700;}
-.font__info .medium{font-weight: 500;}
-.font__info .regualr{font-weight: 400;}
-.font__info .light{font-weight: 300;}
 .color-wrap{
     padding-top: 160px;
 }
-.color-wrap .name-wrap span{
-    color : #000000;
-    font-weight : 500;
+.color-wrap .name-wrap {
+    padding-bottom: 0px;
 }
-.color{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:60px;
-    row-gap: 30px;
+.color {
+    display: flex;
+    flex-wrap: wrap;
 }
 .color li {
-    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
-.color .font-subtitle-w,
-.color .font-subtitle{
-    padding: 16px 32px 0 32px;
-}
-.color .font-body-w,
-.color .font-body{
-    padding: 0px 32px 16px 32px;
-}
-.color__primary{background: #6e3186;}
-.color__sub{background: #e96569;}
+.color__primary1{background: #6e3186;}
+.color__sub1{background: #e96569;}
+.color__primary2{background: #9fd766;}
+.color__sub2{background: #fad340;}
 .color__black{background: #3e3d3c;}
 .color__gray{background: #dddddb;}
 /*------------------------ 메인 ------------------------*/
@@ -339,11 +325,20 @@
     width: 100%;
     height: auto;
 }
+/*------------------------ 가이드 ------------------------*/
+.guide > img {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
 /*------------------------ CF ------------------------*/
 .cf-wrap .con-inner {
     padding: 160px 0 0 0;
 }
-.cf-wrap img{
+.cf-wrap video{
     width: 100%;
     height: auto;
     border-radius: 1em;
@@ -364,17 +359,7 @@
     #banner-main{
         background-attachment: scroll;
     }
-    /* 폰트 & 컬러 */
-    .font__info{
-        margin-top: 60px;
-
-        -webkit-transition: margin-top 1s;
-        -moz-transition: margin-top 1s;
-        -ms-transition: margin-top 1s;
-        -o-transition: margin-top 1s;
-        transition: margin-top 1s;
-    }
-    .color{ grid-template-columns: 1fr 1fr;}   
+   
     /* 메인 */
     .main-wrap .main__left{
         width: 50%;
