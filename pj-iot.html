@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -17,19 +18,19 @@
     <link rel="stylesheet" href="./css/pj-iot.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script defer src="./js/pj-general.js"></script> -->
+    <script defer src="./js/pj-general.js"></script>
     <script>
         // 새로고침&앞으로가기 시 스크롤 탑
-        // history.scrollRestoration = "manual"
-        // $('html').scrollTop(0);
+        history.scrollRestoration = "manual"
+        $('html').scrollTop(0);
         // 뒤로가기로 진입 시 새로고침
-        // window.onpageshow = function (event) {
-        //     if (event.persisted) {
-        //         location.reload();
-        //         $('html').scrollTop(0);
-        //     }
-        //     else { }
-        // };
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                location.reload();
+                $('html').scrollTop(0);
+            }
+            else { }
+        }; 
         $(document).ready(function(){
             // import html
             $("#menu").load("./html/menu.html"); 
@@ -50,25 +51,44 @@
                 $("#info__sketch").hide();
                 $("#info__figma").hide();
                 $("#info__zepplin").hide();
-            });    
+            }); 
+            
+            $("#logo").children('img').attr("src", "./img/logo-w.svg");
+            $("#menu__open").children('img').attr("src", "./img/menu-w.svg");  
 
             $("#footer").load("./html/footer.html"); 
             // animation
-            // window.onload = function () {
-            //     $("#loading").fadeOut(300);
-            //     $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
-            //     $("#header").stop().animate({ opacity : "1"}, 1000);
-            // }
-        });       
+            window.onload = function () {
+                $("#loading").fadeOut(300);
+                $(".contents").stop().animate({ opacity : "1", top : "0"}, 1000);
+                $("#header").stop().animate({ opacity : "1"}, 1000);
+
+                whiteheader();
+            }
+            // 헤더가 흰색일 때
+            $(window).scroll(function(){
+                whiteheader();
+            });
+        });     
+        function whiteheader(){ 
+            if($('body, html').scrollTop() < 100) {      
+                $("#logo").children('img').attr("src", "./img/logo-w.svg");
+                $("#menu__open").children('img').attr("src", "./img/menu-w.svg");
+
+            }else if($('body, html').scrollTop() > 100) {  
+                $("#logo").children('img').attr("src", "./img/logo.svg");
+                $("#menu__open").children('img').attr("src", "./img/menu.svg");
+            };
+        }
     </script>
 </head>
 <body>
-    <!-- <div id="loading">
+    <div id="loading">
         <video muted autoplay loop playsinline>
             <source src="./img/loading.mp4" type="video/mp4">
             <strong>Your browser does not support the video tag.</strong>
         </video>
-    </div> -->
+    </div>
     
     <div id="menu"></div>
     <header id="header"></header>
@@ -132,7 +152,62 @@
                 
             </div>
         </div>
-        
+         <!------------------------ 이슈 / 골 ------------------------>
+         <div class="goal-wrap container">
+            <div class="con-inner">
+                
+                <ul class="name-wrap column4">
+                    <li class="name__num-wrap">
+                        <p class="name__num font-subtitle">03</p>
+                        <div class="name__category">
+                            <p class="font-subtitle">Issue & Goal</p>
+                        </div>
+                    </li>
+                    <li class="column4-13">
+                        <div class="pj__description font-body">
+                            <p class="black">
+                                IoT@home 앱은 <span>기기와 사용자를 연결</span>하는 앱입니다. 
+                                하지만 텍스트만으로 동작을 설명하기 어렵기 때문에, 텍스트 위주의 앱은 사용성을 떨어뜨린다고 판단했습니다.
+                                이에 따라 실제 사용자가 기기를 동작시킬 때 헷갈리지 않도록, <span>실제 기기 중심의 그래픽</span>이 존재해야 하다고 생각했습니다.
+                            </p>
+                        </div>
+                        <div class="goal">
+                            <ul class="black">
+                                <li class="goal__title"><p class="font-body">Issue</p></li>
+                                <li>
+                                    <ul>
+                                        <li class="goal__con">
+                                            <p class="h6">기기명이 생소함</p>
+                                            <p class="font-body">도어락 도어캠 등 기기명이 비슷하고 생소하여 직관적이지 않다.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6">기기 설치가 어려움</p>
+                                            <p class="font-body">사용자가 설명서를 잘 읽지 않아 기기 설치에 어려움이 있다.</p>
+                                        </li>
+                                    </ul>              
+                                </li>
+                            </ul>
+                            <ul class="black">
+                                <li class="goal__title"><p class="font-body">Goal</p></li>
+                                <li>
+                                    <ul>
+                                        <li class="goal__con">
+                                            <p class="h6">기기의 이미지화</p>
+                                            <p class="font-body">기기를 스큐어모피즘과 비슷한 형태로 제작하자.</p>
+                                        </li>
+                                        <li class="goal__con">
+                                            <p class="h6">설명서의 이미지화</p>
+                                            <p class="font-body">기기 설치 시, 과정을 이미지화 하여 그림으로 설명하자.</p>
+                                        </li>
+                                    </ul>              
+                                </li>                                
+                            </ul>
+                            
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
        
         <!------------------------ 폰트 / 컬러 ------------------------>        
         <div class="concept-wrap container">
@@ -150,7 +225,7 @@
                         <li class="column4-13 column2">
                         </li>
                     </ul>
-                    <ul class="column3-outer">
+                    <ul class="fon-detail">
                         <li class="font">
                             <div>
                                 <p class="font-body">Android</p>
@@ -160,30 +235,31 @@
                         </li>
                         <li class="font">
                             <div>
-                                <p class="font-body">IOS</p>
-                                <p class="font-body">영문 Roboto</p>
+                                <p class="font-body">IOS 영문</p>
+                                <p class="font-body">Roboto</p>
                             </div>
                             <img src="./img/iot/img-font-2.png" alt="Roboto 폰트 예시">
                         </li>
                         <li class="font">
                             <div>
-                                <p class="font-body">IOS</p>
-                                <p class="font-body">한글 Apple Gothic</p>
+                                <p class="font-body">IOS 한글</p>
+                                <p class="font-body">Apple Gothic</p>
                             </div>
                             <img src="./img/iot/img-font-3.png" alt="Apple Gothic 폰트 예시">
                         </li>
+                    </ul>
                 </div>
 
 
                 <div class="color-wrap">
-                    <ul class="name-wrap column4">
+                    <ul class="name-wrap column3-outer">
                         <li class="name__num-wrap">
                             <p class="name__num font-subtitle">03 -2</p>
                             <div class="name__category">
                                 <p class="font-subtitle">Color</p>
                             </div>
                         </li>
-                        <li class="column4-13">
+                        <li class="color-chip">
                             <ul class="color">
                                 <li class="color__primary1"></li>
                                 <li class="color__sub1"></li>
@@ -199,24 +275,18 @@
             </div>
         </div>
 
-        <!------------------------ 메인 ------------------------>
-        <div class="main-wrap container">
+        <!------------------------ 스크린 배너 ------------------------>
+        <div class="screen-wrap screen1 container">
 
-            <div class="main con-inner">
-                <ul class="main__left">
+            <div class="screen con-inner">
+                <ul class="screen__left">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle-w">04</p>
                         <div class="name__category">
-                            <p class="font-subtitle-w">Font</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="pj__description font-body-w">
-                            <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
+                            <p class="h6-w">04<span>Graphic</span></p>
                         </div>
                     </li>
                 </ul>
-                <div class="main__right"></div>
+                <div class="screen__right"></div>
             </div>
         </div>
 
@@ -227,18 +297,23 @@
                     <li class="name__num-wrap">
                         <p class="name__num font-subtitle">04 -1</p>
                         <div class="name__category">
-                            <p class="font-subtitle">Icon</p>
+                            <p class="font-subtitle">기기의 이미지화</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                사용자가 기기를 쉽게 인지할 수 있도록, 실제 동작되는 IoT 기기를 메타포로 사용하여 아이콘을 제작했습니다. </br>
+                                실제 기기를 잘 표현하기 위해 스큐어모피즘과 플렛 디자인을 섞어 아이콘이 디자인 되었으며,
+                                복잡한 아이콘을 보완하기 위해 간단한 라인 타입을 함께 제작했습니다.
                             </p>
                         </div>
+                        <ul class="icon__image">
+                            <li><img src="./img/iot/img_step1.png" alt="실제 허브"></li>
+                            <li><img src="./img/iot/img_step2.png" alt="스큐어모피즘화 한 허브"></li>
+                            <li><img src="./img/iot/img_step3.png" alt="반 스큐어모피즘화 한 허브"></li>
+                            <li><img src="./img/iot/img_step4.png" alt="라인 아이콘 허브"></li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -246,61 +321,61 @@
                 <div class="icon-list">
                     <p class="font-body">Solid Icon</p>
                     <ul>
-                        <li><img src="./img/iot/img_icon-01.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-02.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-03.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-04.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-05.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-06.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-07.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-08.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-09.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-10.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-11.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-12.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-13.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-14.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-15.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-16.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-17.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-18.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-19.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-20.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-21.png" alt=""></li>
-                        <li><img src="./img/iot/img_icon-22.png" alt=""></li>
+                        <li><img src="./img/iot/img_icon-01.png" alt="스위치 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-02.png" alt="플러그 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-03.png" alt="열림감지센서 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-04.png" alt="에너지미터 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-05.png" alt="가스락 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-06.png" alt="도어락 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-07.png" alt="온도 조절기 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-08.png" alt="FESCO 케어 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-09.png" alt="ADT 캡스 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-10.png" alt="도어뷰 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-11.png" alt="냉장고 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-12.png" alt="에어컨 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-13.png" alt="공기청정기 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-14.png" alt="세탁기 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-15.png" alt="오븐 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-16.png" alt="밥솥 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-17.png" alt="로봇청소기 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-18.png" alt="도어캠 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-19.png" alt="홈 CCTV 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-20.png" alt="펫 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-21.png" alt="모션센서 아이콘"></li>
+                        <li><img src="./img/iot/img_icon-22.png" alt="허브 아이콘"></li>
                     </ul>
                 </div>
                 <div class="icon-list">
                     <p class="font-body">line Icon</p>
                     <ul>
-                        <li><img src="./img/iot/img_line-01.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-02.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-03.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-04.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-05.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-06.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-07.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-08.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-09.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-10.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-11.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-12.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-13.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-14.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-15.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-16.png" alt=""></li>
-                        <li><img src="./img/iot/img_line-17.png" alt=""></li>
+                        <li><img src="./img/iot/img_line-01.png" alt="스위치 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-02.png" alt="플러그 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-03.png" alt="열림감지센서 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-04.png" alt="에너지미터 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-05.png" alt="가스락 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-06.png" alt="도어락 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-07.png" alt="온도조절기 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-08.png" alt="FESCO 케어 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-09.png" alt="ADT 캡스 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-10.png" alt="도어캠 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-11.png" alt="냉장고 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-12.png" alt="에어컨 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-13.png" alt="공기청정기 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-14.png" alt="세탁기 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-15.png" alt="오븐 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-16.png" alt="밥솥 라인 아이콘"></li>
+                        <li><img src="./img/iot/img_line-17.png" alt="로봇청소기 라인 아이콘"></li>
                     </ul>
                 </div>
             </div>
             <ul class="icon-screen con-inner">
                 <li>
-                    <p class="font-body-w">Icon Screen</p>
-                    <img src="./img/iot/img_icon-screen-03.png" alt="">
+                    <p class="font-body">Screen</p>
+                    <img src="./img/iot/img_icon-screen-01.png" alt="FESCO 케어등록 화면">
                 </li>
-                <li><img src="./img/iot/img_icon-screen-02.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
+                <li><img src="./img/iot/img_icon-screen-02.png" alt="스위치 상세 웹 화면"></li>
+                <li><img src="./img/iot/img_icon-screen-03.png" alt="메인 화면"></li>
+                <li><img src="./img/iot/img_icon-screen-04.png" alt="기기이동 화면"></li>
             </ul>
         
         </div>
@@ -313,120 +388,64 @@
                     <li class="name__num-wrap">
                         <p class="name__num font-subtitle">04 -2</p>
                         <div class="name__category">
-                            <p class="font-subtitle">Graphic</p>
+                            <p class="font-subtitle">설명서의 이미지화</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                아이콘과 마찬가지로, 실제 동작되는 IoT 기기를 메타포로 사용하여 그래픽을 제작했습니다.</br>
+                                그래픽에는 로고 컬러이면서 앱의 서브 컬러인 분홍 배경을 사용하여, 다양한 기기 그래픽에 통일성을 주고자 했습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
 
                 <div class="graphic-list">
-                    <p class="font-body">Circle Icon</p>
+                    <p class="font-body">Graphic</p>
                     <ul>
-                        <li><img src="./img/iot/img_graphic-01.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-02.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-03.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-04.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-05.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-06.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-07.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-08.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-09.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-10.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-11.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-12.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-13.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-14.png" alt=""></li>
+                        <li><img src="./img/iot/img_graphic-01.png" alt="인증 성공 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-02.png" alt="인증 실패 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-03.png" alt="에너지미터 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-04.png" alt="로딩 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-05.png" alt="홈 CCTV 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-06.png" alt="공유기 연결 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-07.png" alt="에너지 미터 연결 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-08.png" alt="허브 연결 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-09.png" alt="에러 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-10.png" alt="도어락 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-11.png" alt="도어캠 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-12.png" alt="스위치 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-13.png" alt="열림감지센서 그래픽"></li>
+                        <li><img src="./img/iot/img_graphic-14.png" alt="플러그 그래픽"></li>
                     </ul>
                 </div>
             </div>
 
             <ul class="graphic-screen con-inner">
                 <li>
-                    <p class="font-body">Icon Screen</p>
-                    <img src="./img/iot/img_icon-screen-03.png" alt="">
+                    <p class="font-body">Screen</p>
                 </li>
-                <li><img src="./img/iot/img_icon-screen-02.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
+                <li><img src="./img/iot/img_graphic-screen-01.png" alt="IoT 장치 관리 화면"></li>
+                <li><img src="./img/iot/img_graphic-screen-02.png" alt="도어캠 연결 화면"></li>
+                <li><img src="./img/iot/img_graphic-screen-03.png" alt="도어락 연결 화면"></li>
             </ul>
         </div>
 
 
-        <!------------------------ 애니메이션 ------------------------>
-        <div class="animation-wrap container">
-            <div class="animation con-inner">
-                <ul class="name-wrap column4">
-                    <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -3</p>
-                        <div class="name__category">
-                            <p class="font-subtitle">Animation</p>
-                        </div>
-                    </li>
-                    <li class="column4-13">
-                        <div class="pj__description font-body">
-                            <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="animation-list">
-                    <p class="font-body">Circle Icon</p>
-                    <ul>
-                        <li><img src="./img/iot/img_graphic-01.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-02.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-03.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-04.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-05.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-06.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-07.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-08.png" alt=""></li>
-                        <li><img src="./img/iot/img_graphic-09.png" alt=""></li>
-                    </ul>
-                </div>
-            </div>
-            <ul class="animation-screen con-inner">
-                <li>
-                    <p class="font-body">Icon Screen</p>
-                    <img src="./img/iot/img_icon-screen-03.png" alt="">
-                </li>
-                <li><img src="./img/iot/img_icon-screen-02.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
-                <li><img src="./img/iot/img_icon-screen-01.png" alt=""></li>
-            </ul>
         
-        </div>
+        <!------------------------ 스크린 배너 ------------------------>
+        <div class="screen-wrap screen2 container">
 
-        <!------------------------ 화면 ------------------------>
-        <div class="screen-title-wrap container">
-            <div class="screen-title con-inner">
-                <ul class="screen-title__left">
+            <div class="screen con-inner">
+                <ul class="screen__left">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle-w">04</p>
                         <div class="name__category">
-                            <p class="font-subtitle-w">Font</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="pj__description font-body-w">
-                            <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
+                            <p class="h6-w">05 <span>Screen</span></p>
                         </div>
                     </li>
                 </ul>
-                <div class="screen-title__right"></div>
+                <div class="screen__right"></div>
             </div>
         </div>
 
@@ -441,29 +460,28 @@
                 <li>
                     <ul class="screen-title__left">
                         <li class="name__num-wrap">
-                            <p class="name__num font-subtitle">04</p>
+                            <p class="name__num font-subtitle">05 -1</p>
                             <div class="name__category">
-                                <p class="font-subtitle">웰컴화면</p>
+                                <p class="font-subtitle">인트로 & 메인</p>
                             </div>
                         </li>
                         <li>
                             <div class="pj__description font-body">
-                                <p>저작권 문제 및 다국어 지원을 위하여 Noto Sans 시리즈를 사용하였으며, 한국판은 Noto Sans CJK KR를 사용하였습니다.</p>
+                                <p>그래픽 위주의 화면을 구성하여, 어렵지 않게 내용 및 기기를 확인할 수 있도록 구성했습니다.</p>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <img src="./img/iot/img_icon-screen-02.png" alt="">
-                    <img src="./img/iot/img_welcome-04.png" alt="">
+                    <img src="./img/iot/img_welcome-01.png" alt="월컴 화면">
+                    <img src="./img/iot/img_welcome-03.png" alt="자동실행에 대해 설명하는 화면">
                 </li>
                 <li>
-                    <img src="./img/iot/img_icon-screen-02.png" alt="">
-                    <img src="./img/iot/img_icon-screen-02.png" alt="">
+                    <img src="./img/iot/img_welcome-05.png" alt="메인 화면">
                 </li>
-                <li>
-                    <img src="./img/iot/img_welcome-05.png" alt="">
-                    <img src="./img/iot/img_icon-screen-02.png" alt="">
+                <li class="mobile-hide">
+                    <img src="./img/iot/img_welcome-02.png" alt="쉬운 컨트롤을 소개하는 화면">
+                    <img src="./img/iot/img_welcome-04.png" alt="IoT Shop 소개 화면">
                 </li>
             </ul>
             
@@ -473,24 +491,21 @@
             <div class="install con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -3</p>
+                        <p class="name__num font-subtitle">05 -2</p>
                         <div class="name__category">
-                            <p class="font-subtitle">등록</p>
+                            <p class="font-subtitle">기기 등록</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                               앱을 처음 사용하는 사용자도, 이미지를 보고 스텝에 따라 쉽게 기기를 설치할 수 있습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
             </div>
-            <img src="./img/iot/banner-install.png" alt="">
+            <img src="./img/iot/banner-install.png" alt="기기 등록 스텝 별 화면">
            
         </div>
         
@@ -499,24 +514,22 @@
             <div class="detail con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -1</p>
+                        <p class="name__num font-subtitle">05 -3</p>
                         <div class="name__category">
-                            <p class="font-subtitle">메인 / 상세웹</p>
+                            <p class="font-subtitle">기기 상세</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                사용자는 상세 화면을 통하여 집 밖에서도 전력 사용량, 현재 집의 온도 등 가전과 집에 대한 여러 상태를 확인할 수 있습니다. </br>
+                                또한 기기 상세 메뉴를 통해 각 가전에 맞는 동작을 실행시킬 수 있습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
 
-                <img src="./img/iot/banner-detail.jpg" alt="">
+                <img src="./img/iot/banner-detail.png" alt="기기 별 상세 화면">
             </div>        
         </div>
         <!------------------------ 에너지미터 ------------------------>
@@ -524,24 +537,22 @@
             <div class="energy con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -3</p>
+                        <p class="name__num font-subtitle">05 -4</p>
                         <div class="name__category">
-                            <p class="font-subtitle">에너지미터</p>
+                            <p class="font-subtitle">에너지 미터</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                에너지 미터는 클라이언트의 요청에 따라, 기존의 Look & Feel이 다르게 설정되었습니다.
+                                전략 및 등급을 확인해야하는 에너지 미터는 그래프를 적극 활용하여, 사용자가 확인하고자 하는 데이터를 쉽게 볼 수 있도록 구성했습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
             </div>
-            <img src="./img/iot/banner-energy.png" alt="">
+            <img src="./img/iot/banner-energy.png" alt="에너지 미터 각 기능 화면">
            
         </div>
         <!------------------------ 가이드 ------------------------>
@@ -549,7 +560,7 @@
             <div class="guide con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -1</p>
+                        <p class="name__num font-subtitle">06</p>
                         <div class="name__category">
                             <p class="font-subtitle">가이드</p>
                         </div>
@@ -557,48 +568,40 @@
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                LG U+의 IoT@home은 대형 프로젝트로, IoT@Shop을 포함해 6개의 가이드로 관리되었습니다.</br> 
+                                해당 문서는 Power Point로 제작되었으며, IOS 제외 Android만 약 1600장 분량의 가이드가 제작되었습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
-
-                <img src="./img/iot/img_guide.png" alt="">
-            </div>        
+                 
+                <div class="guide__image">
+                    <img src="./img/iot/img_guide.png" alt="가이드 모음 화면">
+                </div>  
+            </div>     
         </div>
         <!------------------------ CF ------------------------>
         <div class="cf-wrap container">
             <div class="cf con-inner">
                 <ul class="name-wrap column4">
                     <li class="name__num-wrap">
-                        <p class="name__num font-subtitle">04 -1</p>
+                        <p class="name__num font-subtitle">07</p>
                         <div class="name__category">
-                            <p class="font-subtitle">CF</p>
+                            <p class="font-subtitle">TV CF</p>
                         </div>
                     </li>
                     <li class="column4-13">
                         <div class="pj__description font-body">
                             <p>
-                                하나의 UI를 여러 솔루션 및 서비스에 적용할 수 있도록 <span>디자인 시스템을 제작</span>했습니다.</br> 
-                                또한 효율적인 디자인 시스템 적용을 위해 작업 툴을 <span>포토샵에서 피그마</span>로 전환했습니다.</br></br>
-                                그 결과, 프론트 개발 코드 길이를 단축하여 <span>개발 효율성 증대</span>되었고, 관리 비용을 대폭 절감하여 <span>작업 시간이 3개월 이상 단축</span>되었습니다.</br>
-                                서비스 디자인 UI의 일관성을 유지하여, <span>일관된 브랜드 이미지 전달</span>에도 크게 도움이 되었습니다.
+                                해당 CF는 타사에서 진행하였으며, 앱 출시 후 지속적으로 TV를 통하여 광고가 진행되었습니다.
                             </p>
                         </div>
                     </li>
                 </ul>
 
                 <video controls>
-
-                    <!-- <source src="/media/cc0-videos/flower.webm"
-                            type="video/webm">
-                 -->
                     <source src="./img/iot/video_cf.mp4"
                             type="video/mp4">
-                
                    죄송합니다. 현재 브라우저는 비디오를 지원하지 않습니다.
                 </video>
             </div>        

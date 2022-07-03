@@ -9,7 +9,7 @@
 
 /* ------ 오버뷰 ------ */
 .overview-wrap{
-    background: center / cover no-repeat url(../img/nea/bg-overview.png);
+    background: center / cover no-repeat url(../img/iot/bg-overview.png);
 }
 .overview-wrap .name-wrap {
     padding-bottom: 0px;
@@ -17,10 +17,25 @@
 .overview-wrap .overview__flow-wrap{
     grid-template-columns: repeat(auto-fit, minmax(180px, auto));
 }
-
+/* ------ 이슈 골 ------ */
+.goal-wrap{
+    background-image: url("../img/iot/bg-install.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.goal-wrap .goal  ul li ul{
+    grid-template-columns: 1fr 1fr;
+}
 /*------------------------ 폰트 / 컬러 ------------------------*/
 .font-wrap .name-wrap {
     padding-bottom: 0px;
+}
+.font-wrap .fon-detail{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    column-gap:4.7%;
+    row-gap:4.7%;
 }
 .font{
     margin-top:60px;
@@ -45,88 +60,77 @@
 .color-wrap .name-wrap {
     padding-bottom: 0px;
 }
+.color-chip{
+    grid-column: 2 / 4;
+
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -ms-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
+}
 .color {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    column-gap:4.7%;
+    row-gap:4.7%;
 }
 .color li {
-    width: 100px;
-    height: 100px;
+    padding-bottom: 100%;
     border-radius: 50%;
-    overflow: hidden;
-    margin-right: 20px;
-    margin-bottom: 20px;
 }
+
+
 .color__primary1{background: #6e3186;}
 .color__sub1{background: #e96569;}
 .color__primary2{background: #9fd766;}
 .color__sub2{background: #fad340;}
 .color__black{background: #3e3d3c;}
 .color__gray{background: #dddddb;}
-/*------------------------ 메인 ------------------------*/
-.main-wrap{
-    background-image: url("../img/iot/banner-start.png");
+/*------------------------ 스크린 배너 ------------------------*/
+.screen-wrap, .screen2-wrap{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.main-wrap .main{
+.screen1{
+    background-image: url("../img/iot/banner-start.png");
+}
+.screen2{
+    background-image: url("../img/iot/banner-screen.png");
+}
+.screen-wrap .screen{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
 
 }
-.main-wrap .main__left{
-    width: 30%;
-    padding-top: 30%;
-}
-.main-wrap  .name__num-wrap {
-    padding-bottom: 12px;
-}
-
-/* .main-wrap .main-left{
+.screen1 .screen__left{
     width: 50%;
-    display: flex;
-    justify-content: flex-end;
-
-    background-color: red;
+    padding: 0;
 }
-
-.main-wrap .main-right{
+.screen-wrap .screen__left .name__category span{
+    padding-left: 20px;
+}
+.screen2 .screen__left{
     width: 50%;
-    display: flex;
-    justify-content: flex-start;
+    padding: 30% 0 0 0;
+}
 
-    background-color: orange;
-}
-.main-wrap .main-left .left__contents,
-.main-wrap .main-right .right__contents{
-    width: 700px;
-}
-.main-wrap .main-left .left__contents{
-    background-color: #ffffff;
-}
-.main-wrap .main-right .right__contents{
-    background-color: #6e3186;
-    padding:80px;
-}
-.main-wrap .main-left .left__contents img,
-.main-wrap .main-right .right__contents img{
-    width: calc(100% - 80px);
-    max-width: 300px;
-} */
 /*------------------------ 아이콘 & 그래픽 ------------------------*/
 /* 공통 */
 .icon-list, 
-.graphic-list,
-.animation-list {margin-bottom: 80px;}
+.graphic-list{margin-bottom: 80px;}
 .icon-list:last-child,
-.graphic-list:last-child,
-.animation-list:last-child{margin-bottom: 0px;}
+.graphic-list:last-child{margin-bottom: 0px;}
 .icon-list p, 
-.graphic p,
-.animation p{
+.graphic-list p{
     margin-bottom: 8px;
+    font-weight: 500;
+}
+.icon-screen p, 
+.graphic-screen p{
+    margin-bottom: 16px;
     font-weight: 500;
 }
 .icon-list ul{
@@ -141,23 +145,14 @@
     column-gap:4.7%;
     row-gap: 20px;
 }
-.animation ul{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
-    column-gap:4.7%;
-    row-gap: 20px;
-}
 .icon-list ul img,
-.graphic ul img,
-.animation ul img{
+.graphic ul img{
     width: 100%;
     height: auto;
 }
 /* 아이콘  */
 .icon-wrap{
     background-image: url("../img/iot/bg-icon.png");
-    /* background-image: url("../img/iot/bg-icon.png"),
-    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
     background-size: 100% auto;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -165,10 +160,24 @@
 .icon-wrap .con-inner:first-child{
     padding: 160px 0 0 0;
 }
+.icon-wrap .icon__image{
+    padding: 0 10%;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:4.2%;
+    row-gap: 4.2%;
+    text-align: center;
+}
+.icon-wrap .icon__image img{
+    width: 100%;
+    height: auto;
+}
 .icon-screen{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap:4.2%;
+    row-gap: 4.2%;
 }
 .icon-screen li:first-child{
     display: flex;
@@ -187,8 +196,6 @@
 /* 그래픽  */
 .graphic-wrap{
     background-image: url("../img/iot/bg-graphic.png");
-    /* background-image: url("../img/iot/bg-icon.png"),
-    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
     background-size: 100% auto;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -200,6 +207,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap:4.2%;
+    row-gap: 4.2%;
 }
 .graphic-screen li:first-child{
     display: flex;
@@ -215,37 +223,7 @@
     5px 20px 20px #0000001a,
     10px 40px 25px #00000026;
 }
-/* 애니메이션  */
-.animation-wrap{
-    background-image: url("../img/iot/bg-animation.png");
-    /* background-image: url("../img/iot/bg-icon.png"),
-    linear-gradient(#ffffff 0%, #f5f5f5 100%); */
-    background-size: 100% auto;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-}
-.animation-wrap .con-inner:first-child{
-    padding: 160px 0 0 0;
-}
-.animation-screen{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:4.2%;
-}
-.animation-screen li:first-child{
-    display: flex;
-    flex-wrap: wrap; 
-    align-content: space-between;
-}
-.animation-screen li img{
-    width: 100%;
-    height: auto;
-    border-radius: 1em;
-    box-sizing: border-box;
-    box-shadow: 
-    5px 20px 20px #0000001a,
-    10px 40px 25px #00000026;
-}
+
 /*------------------------ 화면 ------------------------*/
 .screen-title-wrap{
     background-image: url("../img/iot/banner-screen.png");
@@ -280,8 +258,8 @@
     flex-wrap: wrap; 
     align-content: space-between;
 }
-.welcome > li:nth-child(2){padding-top: 50%;}
-.welcome > li:nth-child(3){padding-top: 100%;}
+.welcome > li:nth-child(2){padding-top: 30%;}
+.welcome > li:nth-child(4){padding-top: 60%;}
 .welcome > li img{
     width: 100%;
     height: auto;
@@ -299,7 +277,12 @@
 }
 
 /*------------------------ 등록 ------------------------*/
-.install-wrap{background-color: #f5f5f5;}
+.install-wrap{
+    background-image: url("../img/iot/bg-install.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .install-wrap .con-inner {
     padding: 160px 0 0 0;
 }
@@ -314,7 +297,7 @@
     border-radius: 1em;
 }
 /*------------------------ 에너지 ------------------------*/
-.energy-wrap{background-color: #e9e9e9;}
+.energy-wrap{background-color: #f5f5f5;}
 .energy-wrap .con-inner {
     padding: 160px 0 0 0;
 }
@@ -326,53 +309,106 @@
     height: auto;
 }
 /*------------------------ 가이드 ------------------------*/
-.guide > img {
+
+.guide-wrap .guide__image{
+    padding: 0 40px;
+    background-color: #f5f5f5;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.guide-wrap .guide__image img{
     width: 100%;
     height: auto;
-    border-radius: 1em;
-    border: 2px solid #e5e5e5;
-    box-sizing: border-box;
-}
-
-/*------------------------ CF ------------------------*/
-.cf-wrap .con-inner {
+} 
+/* .guide-wrap .con-inner{
     padding: 160px 0 0 0;
 }
+.guide-wrap .guide__image{
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.guide-wrap .guide__image img{
+    padding: 40px 0;
+    margin: auto;
+} */
+/*------------------------ CF ------------------------*/
+.cf-wrap{
+    background-color: #f5f5f5;
+}
+/* .cf-wrap .con-inner {
+    padding: 160px 0 0 0;
+}*/
 .cf-wrap video{
     width: 100%;
     height: auto;
     border-radius: 1em;
-}
-/* @media screen and (max-width: 1920px) { 
-    .main-wrap .main-left .left__contents,
-    .main-wrap .main-right .right__contents{
-        width: calc(100% - 240px);
-    }
-}
-@media screen and (max-width: 1400px) { 
-    .main-wrap .main-left .left__contents,
-    .main-wrap .main-right .right__contents{
-        width: calc(100% - 160px);
-    }
-} */
+} 
 @media screen and (max-width: 960px) { 
     #banner-main{
         background-attachment: scroll;
     }
    
-    /* 메인 */
-    .main-wrap .main__left{
-        width: 50%;
+ 
+    /* 컬러 */
+    .color-chip{
+        grid-column: 1 / 4;
+        margin-top: 20px;
+
+        -webkit-transition: margin-top 1s;
+        -moz-transition: margin-top 1s;
+        -ms-transition: margin-top 1s;
+        -o-transition: margin-top 1s;
+        transition: margin-top 1s;
     }
 }
+@media screen and (max-width: 768px) { 
+    /* 그래픽 */
+    .icon-wrap{
+        background-size: 300% auto;
+        background-position: left bottom;
+    }
+    .icon-screen{
+        grid-template-columns: 1fr 1fr;
+    }
+    .icon-screen li:first-child img{
+        display: none;
+    }
+    .graphic-wrap{
+        background-size: 300% auto;
+        background-position: right bottom;
+    }
+    .graphic-screen{
+        grid-template-columns: 1fr 1fr;
+    }
+    .animation-screen{
+        grid-template-columns: 1fr 1fr;
+    }
+    /* 웰컴 */
+    .welcome{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap : 80px
+    }
+    .welcome > li:first-child{
+        grid-column: 1 / 4;
+    }
+} 
 @media screen and (max-width: 480px) { 
-    /* 메인 */
-    .main-wrap{
-        background-position: 40% bottom;
+
+    /* 컬러 */
+    .color {
+        grid-template-columns: repeat(auto-fit, minmax(50px, auto));
     }
-    .main-wrap .main__left{
-        width: 80%;
+    /* 웰컴 */
+    .welcome{
+        grid-template-columns: 1fr 1fr;
     }
+    .welcome > li:first-child{
+        grid-column: 1 / 3;
+    }
+    .welcome .mobile-hide{
+        display: none;
+    }
+    
 } 
 
 

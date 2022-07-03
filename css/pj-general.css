@@ -185,6 +185,10 @@ header{
     color : #ffffff;
     font-weight : 500;
 }
+.goal-wrap .pj__description .black span{
+    color : #000000;
+    font-weight : 500;
+}
 .goal-wrap .goal{
     width: 100%;
     margin-top: 80px;
@@ -198,6 +202,9 @@ header{
 .goal-wrap .goal ul .goal__title{
     padding-bottom : 4px;
     border-bottom: 1px solid #ffffffB3;
+}
+.goal-wrap .goal .black .goal__title{
+    border-bottom: 1px solid #0000004d;
 }
 .goal-wrap .goal  ul li ul{
     padding-top:16px;
