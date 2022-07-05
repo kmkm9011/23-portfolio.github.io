@@ -73,7 +73,7 @@ header{
     transition: padding-right 1s;
 }
 .name__10{width: 60px;}
-.name__category{width: calc(100% - 60px);}
+.name__category{width: calc(100% - 80px);}
 .name__category p{font-weight: 500;}
 #info__name{padding-right: 20px;}
 #info__name, #info__name-sub{display: inline-block;}
@@ -101,7 +101,6 @@ header{
 }
 .info__description{
     padding-top: 10px;
-    line-height: 24px;
 }
 .info__bar-back{
     margin-top: 10px;
@@ -173,7 +172,10 @@ header{
     background-color: #ffffff4d;
 }
 .overview__title{
-    padding: 32px 0 20px; 
+    padding: 32px 0 16px; 
+}
+.overview__description {
+    padding-top: 4px; 
 }
 
 /*------------------------ 이슈 & 골 ------------------------*/
@@ -183,7 +185,7 @@ header{
 }
 .goal-wrap .pj__description span{
     color : #ffffff;
-    font-weight : 500;
+    font-weight : 400;
 }
 .goal-wrap .pj__description .black span{
     color : #000000;
@@ -201,7 +203,7 @@ header{
 }
 .goal-wrap .goal ul .goal__title{
     padding-bottom : 4px;
-    border-bottom: 1px solid #ffffffB3;
+    border-bottom: 1px solid #ffffff80;
 }
 .goal-wrap .goal .black .goal__title{
     border-bottom: 1px solid #00000033;
@@ -221,12 +223,14 @@ header{
     -o-transition: padding 1s;
     transition: padding 1s;
 }
+.goal-wrap .goal .goal__con .h6,
 .goal-wrap .goal .goal__con .h6-w{
     font-size: 18px;
 }
+.goal-wrap .goal .goal__con .font-body,
 .goal-wrap .goal .goal__con .font-body-w{
     padding-top: 4px;
-    line-height: 20px;
+    line-height: 24px;
 }
 .goal-wrap .goal .goal__arrow{
     display: flex;

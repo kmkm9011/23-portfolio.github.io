@@ -88,10 +88,13 @@
 .color__black{background: #3e3d3c;}
 .color__gray{background: #dddddb;}
 /*------------------------ 스크린 배너 ------------------------*/
-.screen-wrap, .screen2-wrap{
+.screen-wrap{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+.screen-wrap .name__category{
+    width: auto;
 }
 .screen1{
     background-image: url("../img/iot/banner-start.png");
@@ -108,6 +111,10 @@
 .screen1 .screen__left{
     width: 50%;
     padding: 0;
+}
+.screen1 .screen__left p,
+.screen2 .screen__left p{
+    text-shadow: 0 0px 30px #000000e6
 }
 .screen-wrap .screen__left .name__category span{
     padding-left: 20px;
@@ -139,7 +146,7 @@
     column-gap:4.7%;
     row-gap: 20px;
 }
-.graphic ul{
+.graphic-list ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, auto));
     column-gap:4.7%;
