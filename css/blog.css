@@ -24,12 +24,15 @@ header{
     width: 100%;
     height: auto;
 }
+.blog__banner .blog__title{
+    padding: 0 0 8px 0;
+}
 .blog__banner .blog__title, .blog__banner .blog__description{
     text-align: center;
 }
 .blog__title{
     width: 100%;
-    padding: 20px 0 10px;
+    padding: 20px 0 2px;
 }
 .blog__description{
     width: 100%;

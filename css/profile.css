@@ -27,7 +27,11 @@ header{
     height: 200px;
 }
 .profile__concept .concept__tet{
+    margin-top: 16px;
     text-align: center;
+}
+.profile__concept .concept__tet .font-title{
+    margin-bottom: 4px;
 }
 .profile__top, .profile__bottom{
     display: flex;
@@ -48,11 +52,10 @@ header{
 }
 /* skill */
 /* .skill__name{margin-bottom: 60px;} */
-.skill__skill li{margin-bottom: 30px;}
+.skill__skill li{margin-bottom: 40px;}
 .skill__skill li:last-child{margin-bottom: 0px;}
 .skill__info{
     width: 100%;
-    margin-top: 8px;
     display: flex;
     align-items: center;
 }

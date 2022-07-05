@@ -13,6 +13,12 @@ header{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+
+    -webkit-transition: width 1s, padding 1s;
+    -moz-transition: width 1s, padding 1s;
+    -ms-transition: width 1s, padding 1s;
+    -o-transition: width 1s, padding 1s;
+    transition: width 1s, padding 1s;
 }
 .project ul li{
     width: 50%;
@@ -21,6 +27,12 @@ header{
     top: 0;
     float: left;
     cursor: pointer;
+
+    -webkit-transition: padding-bottom 1s;
+    -moz-transition: padding-bottom 1s;
+    -ms-transition: padding-bottom 1s;
+    -o-transition: padding-bottom 1s;
+    transition: padding-bottom 1s;
 } 
 .project__info{
     opacity: 0;
@@ -94,30 +106,60 @@ header{
     .project ul{
         width: calc(100% - 480px);
         padding: 0 240px;
+
+        -webkit-transition: width 1s, padding 1s;
+        -moz-transition: width 1s, padding 1s;
+        -ms-transition: width 1s, padding 1s;
+        -o-transition: width 1s, padding 1s;
+        transition: width 1s, padding 1s;
     }
 }
 @media screen and (max-width: 1400px) { 
     .project ul{
         width: calc(100% - 320px);
         padding: 0 160px;
+
+        -webkit-transition: width 1s, padding 1s;
+        -moz-transition: width 1s, padding 1s;
+        -ms-transition: width 1s, padding 1s;
+        -o-transition: width 1s, padding 1s;
+        transition: width 1s, padding 1s;
     }
 }
 @media screen and (max-width: 960px) { 
     .project ul{
         width: calc(100% - 120px);
         padding: 0 60px;
+
+        -webkit-transition: width 1s, padding 1s;
+        -moz-transition: width 1s, padding 1s;
+        -ms-transition: width 1s, padding 1s;
+        -o-transition: width 1s, padding 1s;
+        transition: width 1s, padding 1s;
     }
 }
 @media screen and (max-width: 768px) { 
     .project ul li{
         width: 100%;
         padding-bottom: 100%;
+
+        -webkit-transition: padding-bottom 1s;
+        -moz-transition: padding-bottom 1s;
+        -ms-transition: padding-bottom 1s;
+        -o-transition: padding-bottom 1s;
+        transition: padding-bottom 1s;
     }
 }
 @media screen and (max-width: 480px) { 
     .project ul{
         width: calc(100% - 64px);
         padding: 0 32px; 
+
+        -webkit-transition: width 1s, padding 1s;
+        -moz-transition: width 1s, padding 1s;
+        -ms-transition: width 1s, padding 1s;
+        -o-transition: width 1s, padding 1s;
+        transition: width 1s, padding 1s;
     }
     .project ul li{
         opacity: 1;    

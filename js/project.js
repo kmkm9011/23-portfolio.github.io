@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    projectOpen();
     projectLink();
     $(window).bind("pageshow", function (event) {
         if (event.originalEvent.persisted) {
@@ -12,11 +11,6 @@ $(document).ready(function(){
     
 });
 
-function projectOpen(){
-    $("header").stop().animate({ opacity : "1", height : "160px"}, 500);
-    $("footer").stop().animate({ opacity : "1", top : "0px"}, 500);     
-    $(".contents").stop().animate({ opacity : "1", top : "0px"}, 500);
-}
 
 
 function projectLink(){
