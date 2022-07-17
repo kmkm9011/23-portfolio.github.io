@@ -5,7 +5,7 @@
     background: center / cover no-repeat url(../img/iot/banner-main.png);
     background-attachment: fixed;
 }
-.info__bar{width: 80%;}
+.info__bar{width: 90%;}
 
 /* ------ 오버뷰 ------ */
 .overview-wrap{
